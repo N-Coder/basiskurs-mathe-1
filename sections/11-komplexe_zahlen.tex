@@ -1,0 +1,308 @@
+\section{Die komplexen Zahlen}
+
+\subsection{Definition}
+
+	\begin{enumerate}
+	\item Wir führen auf $\mathbb{R}^2$ eine Multiplikation ein durch
+	\begin{align*}
+	(a,b)\cdot (c,d) = (ac-bd, bc-ad).
+	\end{align*}
+	Wie man leicht nachprüft, erhält man damit einen Körper $\mathbb{C}$. Dieser enthält $\mathbb{R}$ mittels der 
+	injektiven Abbildung
+	\begin{align*}
+	\iota: \mathbb{R} \hookrightarrow \mathbb{C}, a\mapsto (a,0)
+	\end{align*}
+	
+	\item \underline{Schreibweisen:}
+		\begin{itemize}
+		\item Statt $e_1=(1,0)$ schreibe $1$.
+		\item Statt $e_2=(0,1)$ schreibe $i$.
+		\end{itemize}
+		Jedes Element von $\mathbb{C}$ hat also eine eindeutige Darstellung der Form
+		\begin{align*}
+		a+b\cdot i \textnormal{ mit } a,b \in \mathbb{R}.
+		\end{align*}
+		
+	\item Für $z=a+bi \in \mathbb{C}$ heißt $\operatorname{Re}(z)=a$ der \textbf{Realteil} von $z$ 
+	und $\operatorname{Im}(z)=b$ der \textbf{Imaginärteil} von $z$.
+	
+	\end{enumerate}
+	
+	
+\subsection{Bemerkung}
+
+	\begin{enumerate}
+	\item Die Zahl $i$ erfüllt $i^2 = 1$, denn $(0,1)\cdot (0,1)=(0-1,0)=(-1,0).$\\
+	Man schreibt daher auch $i=\sqrt{-1}$.
+	
+	\item Für $a\in \mathbb{R}_{\geq o}$ gilt:
+	\begin{align*}
+	(\sqrt{a}\cdot i)^2=a\cdot (-1)=-a \textnormal{, also } \pm\sqrt{a}\cdot i = \sqrt{-a}
+	\end{align*}
+	
+	\item Für $z=a+bi \in \mathbb{C}\backslash \{0\}$ gilt:
+	\begin{align*}
+	\frac{1}{z}=\frac{1}{a+bi}=\frac{a-bi}{(a+bi)(a-bi)}=\frac{a-bi}{a^2+b^2}=
+	\frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}\cdot i
+	\end{align*}
+	\end{enumerate}
+	
+	
+\subsection{Beispiele}
+
+	\begin{enumerate}
+	\item Für $n\in\mathbb{Z}$ gilt: 
+	$i^n=\left\{\begin{array}{ccc}
+          		i	& \textnormal{falls}	& n\equiv 1 \quad (mod~4) \\
+          		-1	& \textnormal{falls}	& n\equiv 2 \quad (mod~4) \\
+          		-i	& \textnormal{falls}	& n\equiv 3 \quad (mod~4) \\
+          		1	& \textnormal{falls}	& n\equiv 0 \quad (mod~4) \\                  			
+          \end{array}\right.$.
+	
+	
+	\item $(1+i)^2=2i$
+	\item In $\mathbb{C}$ besitzt jede quadratische Gleichung genau 2 Lösungen.
+	\end{enumerate}
+	
+	
+\subsection[Komplexe Konjugation]{Definition}
+
+	Die Abbildung $\mathlll{\kappa}:\mathbb{C}\rightarrow\mathbb{C},\quad a+bi\mapsto a-bi$ 
+	heißt die \textbf{komplexe Konjugation}.\\ \todo{Funktion schöner machen}
+	Für $z\in\mathbb{C}$ schreiben wir statt $\mathlll{\kappa}(z)$ auch $\overline{z}$.
+	
+	
+\subsection[Rechenregeln für komplexe Konjugation]{Bemerkung (Rechenregeln für komplexe Konjugation)}
+
+	\begin{enumerate}
+	\item $\overline{\overline{z}}=z$
+	\item $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$
+	\item $\overline{z_1\cdot z_2}=\overline{z_1}\cdot\overline{z_2}$
+	\item Für $a\in\mathbb{R}$ gilt: $\overline{a\cdot z}= a\cdot \overline{z}$
+	\item $\frac{1}{\overline{z}}=\overline{\left(\frac{1}{z}\right)}$
+	\item $\overline{z}+z=2a=2\operatorname{Re}(z)$
+	\item $z-\overline{z}=2bi=2\operatorname{Im}(z)\cdot i$
+	\end{enumerate}\todo{7.?}
+	
+	
+\subsection[Die komplexe Zahlenebene]{Bemerkung (Die komplexe Zahlenebene)}
+
+	Im $\mathbb{A}^2(\mathbb{R})$ führen wir kartesische Koordinaten ein und identifizieren die Zahl
+	$z = a+bi\in \mathbb{C}$ mit dem Punkt $(a,b)$.\todo{Skizze}\\ \newline
+	
+	\underline{Geometrische Interpretation der Körperoperationen:}\\
+	\
+	\begin{enumerate}
+	\item Addition:
+	\begin{align*}
+	(a+bi)+(c+di)=(a+c)+(b+d)i \textnormal{entspricht der Vektoraddition.}
+	\end{align*}
+	
+	\item Multiplikation mit $i: \qquad (a+bi)\cdot i=-b+ai$.\\ \newline
+	Dies entspricht also der Drehung um $90^{\circ}$ im mathematisch positiven Sinn um den Ursprung.
+
+	\item Abstand zum Nullpunkt/Länge des Vektors\\
+	Der \textbf{Betrag} einer komplexen Zahl $z=a+bi$ ist $\vert z \vert=\sqrt{a^2+b^2}$\\ \newline
+	\underline{Eigenschaften:}
+		\begin{enumerate}
+		\item $\vert z_1\cdot z_2\vert = \vert z_1\vert\cdot\vert z_2\vert$ für $z_1,z_2\in\mathbb{C}$
+		\item $\vert c\cdot z\vert = \vert c\vert\cdot\vert z\vert$ für $c\in\mathbb{R},z\in\mathbb{C}$
+		\item $\vert z_1 + z_2\vert \leq \vert z_1\vert + \vert z_2\vert$ für $z_1,z_2\in\mathbb{C}$
+		\end{enumerate}
+		
+	\item Der \textbf{Winkel} $\varphi$ (oder das \textbf{Argument}) einer komplexen Zahl 
+	$z\in\mathbb{C}\backslash\{0\}$ mit $z=a+bi$ und $a,b\in\mathbb{R}$ erfüllt 
+	$z=\vert z\vert\cdot \cos(\varphi) + \vert z \vert \cdot \sin(\varphi)\cdot i 
+	\qquad$ \mbox{$(\varphi\in[0,2\pi[)$}.\\ \newline
+	Wir schreiben $\varphi=\operatorname{arc}(z).$
+	
+	\item Sei $r=\vert z\vert$ und $\varphi=\operatorname{arc}(z)$. Dann ist die Multiplikation mit
+	\begin{align*}
+	z=r\cdot\cos(\varphi)+r\cdot\sin(\varphi)i=r\big( \cos(\varphi)+\sin(\varphi)i~\big)
+	\end{align*}
+	die Komposition der Multiplikation mit $\cos(\varphi)+\sin(\varphi)i$ 
+	und der Multiplikation mit $r\in\mathbb{R}_+$. Letztere ist die zentrische Streckung um den Faktor $r$ mit 
+	Mittelpunkt 0.\\ \newline
+	Nun wende die erste Multiplikation an auf $\tilde{z}=\tilde{r}\cdot (\cos(\psi)+\sin(\psi)i)$.\\
+	Dann gilt:
+	\begin{equation*}\begin{gathered}
+	\tilde{z}\cdot\big( \cos(\varphi)+\sin(\varphi)i \big)=\\
+	\tilde{r}\big( \cos(\psi)+\sin(\psi)i \big)\big( \cos(\varphi)+\sin(\varphi)i \big)=\\
+	\tilde{r}\Big[\big(\cos(\psi)\cos(\varphi)-\sin(\psi)\sin(\varphi)\big)+
+	\big(\sin(\psi)\cos(\varphi)+\cos(\psi)\sin(\varphi)\big)i\Big]=\\
+	\tilde{r}\Big[\cos(\psi+\varphi) + \sin(\psi+\varphi)i \Big]
+	\end{gathered}\end{equation*}
+	Das Produkt hat also denselben Betrag, aber der Winkel ist um $\varphi$ größer. Die Multiplikation mit 
+	$\cos(\varphi)+\sin(\varphi)i$ entspricht also der Drehung um den Winkel $\varphi$ um den Nullpunkt.\\
+	\newline
+	Insgesamt ist die Multiplikation mit $z$ also eine Drehstreckung mit Zentrum 0.
+	
+	\end{enumerate}\todo{Skizzen!s}
+
+
+\subsection[Algebraische Beschreibung geometrischer Mengen]{Bemerkung (Algebraische Beschreibung geometrischer Mengen)}
+
+	\begin{enumerate}
+	\item (Kreis mit Mittelpunkt $m\in\mathbb{C}$ und Radius $r\in\mathbb{R}_+$)\\
+	Der Abstand von $z\in\mathbb{C}$ zu $m$ ist gegeben durch $\vline z-m \vline$.\\
+	Der Kreis ist also gegeben durch $K=\{ z\in\mathbb{C}~|~\vline z-r \vline = r \}$.
+	
+	\item Eine Gerade $G$ durch $z=a+bi$ und $\tilde{z}=c+di$ ist gegeben durch 
+	$G=\{z+\lambda(\tilde{z}-z)|\lambda\in\mathbb{R} \}$ (\textit{explizite Darstellung}).\\ \newline
+	\textit{Implizite Darstellung:} $G=\{z\in\mathbb{C}|\overline{e}z+e\overline{z}+g=0\}$
+	\mbox{mit $e\in\mathbb{C},~g\in\mathbb{R}$}.\\
+	Es gilt: $\overline{e}z+e\overline{z}=\overline{e}z+\overline{(ez)}=2\operatorname{Re}(\overline{e}z)$.\\
+	Schreibe: $e=\alpha+\beta i$ mit $\alpha,\beta\in\mathbb{R}$ und $z=x+yi$ mit $x,y\in\mathbb{R}$.\\
+	Dann folgt: 
+	\begin{equation*}\begin{gathered}
+	\operatorname{Re}(\overline{e}z)=\operatorname{Re}\big( (\alpha+\beta i)(x+yi) \big)=\\
+	\operatorname{Re}\big( (\alpha x+\beta y)+(-\beta x+\alpha y)i \big)=\\
+	\alpha x+\beta y.\\
+	\Bigg(= \Bigg \langle 
+	\left(\begin{array}{c}\alpha\\ \beta \end{array}\right),
+	\left(\begin{array}{c} x\\y\end{array}\right)
+	\Bigg \rangle\Bigg)
+	\end{gathered}\end{equation*}
+	~\newline		
+	Dann folgt:
+	\begin{align*}
+	\overline{e}z+e\overline{z}+\underbrace{g}_{\in\mathbb{R}}=
+	\underbrace{2\alpha x+2\beta y+g=0}_{\textnormal{implizite Geradengleichung in }\mathbb{R}^2.}.
+	\end{align*}
+	
+	\end{enumerate}
+	
+	
+\subsection[Algebraische Interpretation von Abbildungen der Zeichenebene]{Bemerkung (Algebraische Interpretation von Abbildungen der Zeichenebene)}
+
+	\begin{enumerate}
+	\item (Translation)\\
+	Die Translation $\tau$ um den Vektor $a+bi$ ist die Addition
+	\begin{align*}
+	\tau : \mathbb{C}\rightarrow\mathbb{C}, z\mapsto z+(a+bi)
+	\end{align*}.
+	
+	\item (Drehung)\\
+	Die Drehung um den Winkel $\varphi$ um den Nullpunkt entspricht der Multiplikation mit 
+	$\cos(\varphi)+\sin(\varphi)i$.\\ \newline
+	Sei nun $m\in\mathbb{C}$.\\ \newline
+	Die Drehung $\mathlll{\rho}{m,\varphi}$ ist die Komposition von
+		\begin{enumerate}
+		\item Verschiebung um $-m$
+		\item Drehung um 0 um Winkel $\varphi$
+		\item Verschiebung um $+m$
+		\end{enumerate}
+		~\newline
+	Es gilt also: $\mathlll{\rho}_{m,\varphi}: \mathbb{C}\rightarrow\mathbb{C}, 
+	z\mapsto (\cos(\varphi)+\sin(\varphi)i)(z-m)+m$.
+	
+	\item (Spiegelung an einer Geraden durch 0)\\
+	$G$ habe einen Richtungsvektor $a+bi$.\\ 
+	Die Gerade durch $z$ und $\tilde{z}$ haben dann den Richtungsvektor	$-b+ai$.\\
+	Dann ist $G\cap H$ der Lotfußpunkt $l\in\mathbb{C}$ und es gilt:
+	\begin{align*}
+	\tilde{z}=\mathlll{\sigma}_G(z)=z+2(l-z)=-z+2l.
+	\end{align*}
+	
+	\end{enumerate}\todo{Funktionen, Skizzen}
+	
+	
+\subsection[Geometrische Interpretation von $z\mapsto\overline{z}$]{Bemerkung (Geometrische Interpretation von $z\mapsto\overline{z}$)}\todo{fett}
+
+	Die Abbildung \todo{Funktion} $\mathlll{\kappa}: \mathbb{C}\rightarrow\mathbb{C},a+bi\mapsto a-bi$ entspricht der Spiegelung an der $\operatorname{Re}(z)$-Achse.
+	
+	
+\subsection[Inversion am Kreis]{Bemerkung (Inversion am Kreis)}
+
+
+	\todo{Funktion}Die Abbildung $\iota:\mathbb{C}\backslash\{0\}\rightarrow\mathbb{C}\backslash\{0\},
+	z\mapsto \frac{1}{\overline{z}}$ wirkt auf $z=a+bi=r(\cos(\varphi)+\sin(\varphi)i)$ wie folgt:
+	
+	\begin{equation*}
+	\begin{gathered}
+	\iota(z)=\frac{1}{\overline{z}}=\\
+	\mathll{\kappa}\left( \frac{1}{r}\cdot \frac{\cos(\varphi)-\sin(\varphi)i}{(\cos(\varphi)+\sin(\varphi)i)
+	(\cos(\varphi)-\sin(\varphi)i)}  \right)=\\
+	\frac{1}{r}\mathll{\kappa}(\cos(\varphi)-\sin(\varphi)i)=\\
+	\frac{1}{r}(\cos(\varphi)+\sin(\varphi)i)	
+	\end{gathered}
+	\end{equation*}
+	
+	Die Zahl $\iota(z)$ liegt also auf demselben Halbstrahl druch 0 wie $z$. Ihr Betrag ist $\frac{1}{r}.$
+	\todo{skizze}\\ \newline
+	
+	Der Einheitskreis $\mathbb{E}=\{\cos(\varphi)+\sin(\varphi)i|\varphi\in [0,2\pi [\}$ bleibt dabei fest.\\
+	\newline
+	Es gilt: $\iota^2(z)=\iota(\iota(z))=z$.\\ \newline
+	Die geometrische Interpretation von $\frac{1}{z}$ ist also der Punkt, der aus $z$ entsteht, 
+	indem man zuerst an der $\operatorname{Re}(x)$-Achse spiegelt und dann die Inversion am 
+	Einheitskreis durchführt.
+	
+	
+\subsection[Eigentschaften der Inversion am Kreis]{Satz (Eigentschaften der Inversion am Kreis)}
+
+	\begin{enumerate}
+	\item Ist $G$ eine Gerade in $\mathbb{C}$, die nicht durch 0 geht, so ist $\iota(G)$ ein Kreis.
+	\item Ist $G$ eine Gerade durch 0, so gilt $\iota(G\backslash\{0\})=G\backslash\{0\}$.
+	\item Ist $K$ ein Kreis in $\mathbb{C}$, der durch 0 geht, so ist $\iota(K\backslash\{0\})$ eine Gerade,
+	die nicht durch 0 geht.
+	\item Ist $K$ ein Kreis in $\mathbb{C}$, der nicht durch 0 geht, so ist $\iota(K)$ wieder ein Kreis.
+	\end{enumerate}
+
+
+\subsection[Die komplexe $e$-Funktion]{Bemerkung (Die komplexe $e$-Funktion)}
+
+	Die reelle $e$-Funktion $x\mapsto e^x$ erfüllt $(e^x)'=e^x$ und $e^0=1$.\\
+	Für alle $x\in\mathbb{R}$ gilt: \[
+	e^x=1+\frac{1}{1!}x+\frac{1}{2!}x^2+\dots =\sum_{n\geq 0} \frac{1}{n!}x^n \].\\ \newline
+	
+	Für $z\in\mathbb{C}$ konvergiert die Reihe \[\sum_{n\geq 0} \frac{1}{n!}z^n \in\mathbb{C} \] ebenfalls.\\
+	\newline
+	Weitere Potenzreihen, die für jedes $x\in\mathbb{R}$ konvergieren, sind:
+	
+	\begin{itemize}
+	\item $\sin x=\frac{1}{1!}x-\frac{1}{3!}x^3+\frac{1}{5!}x^5-+\dots$
+	\item $\cos x=1-\frac{1}{2!}x^2+\frac{1}{4!}x^4-\frac{1}{6!}x^6+-\dots$
+	\end{itemize}
+
+	~\newline
+	Durch dieselben Potenzreihen erhält man $e^z,\sin(z)$ und $\cos(z)$ auch für alle $z\in\mathbb{C}$.\\ \newline
+	Man weißt nach, dass $e^{z_1+z_2}=e^{z_1}\cdot e^{z_2}$ für alle $z_1,z_2 \in\mathbb{C}$ gilt.\\ \newline 
+	
+	
+\subsection[Die Eulersche Formel]{Satz (Die Eulersche Formel)}
+
+	Für alle $\varphi\in\mathbb{R}$ gilt: 
+	$e^{i\varphi}=\underbrace{\cos(\varphi)+i\cdot\cos(\varphi)}_{\textnormal{Punkt auf dem Einheitskreis}}$\\
+	\newline
+	\textsc{Beweis.} Es gilt:
+	\begin{align*}
+	e^{i\varphi} 	&=1+\frac{1}{1!}(i\varphi)+\frac{1}{2!}(i^2\varphi^2)+\frac{1}{3!}(i^3\varphi^3)+\dots=\\
+					&=(1-\frac{1}{2!}\varphi^2+\frac{1}{4!}\varphi^4-\frac{1}{6!}\varphi^6+-\dots)+
+					i(\frac{1}{1!}\varphi-\frac{1}{3!}\varphi^3+\frac{1}{5!}\varphi^5-+\dots)=\\
+					&=\cos\varphi+i\cdot\sin\varphi 
+	\end{align*}\todo{qed}
+	
+	
+\subsection{Korollar}
+
+	\begin{align*}
+	e^{i\pi}+1=0.
+	\end{align*}
+
+
+\subsection{Beispiel}
+
+	Aus der Eulerschen Formel folgt:
+	\begin{align*}
+	e^{i(\alpha+\beta)}=\cos(\alpha+\beta)+i\cdot\sin(\alpha\beta).
+	\end{align*}
+	Ferner gilt:
+	\begin{align*}
+	e^{i(\alpha+\beta)}	&=e^{i\alpha}\cdot e^{i\beta}=\\
+						&=(\cos(\alpha)+i\cdot \sin(\alpha))(\cos(\beta)+i\sin(\beta))=\\
+						&=[\cos\alpha\cdot\cos\beta-\sin\alpha\sin\beta]+
+						i[\sin\alpha\cos\beta+\cos\alpha\sin\beta].
+	\end{align*}
+	
+	Durch Vergleich der Real- und Imaginärteile folgen die Additionstheoreme für $\sin$ und $\cos$.

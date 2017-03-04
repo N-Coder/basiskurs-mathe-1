@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 %\usepackage[ngerman]{babel}
 \usepackage{amsmath}
+\usepackage{relsize} %Größere Symbole
 \usepackage{amsfonts} % Buchstaben mit Doppelstrich
 \usepackage{parskip} % Absätze ohne Einrückungen
 \usepackage{mathtools} % Für Pfeil mit Erklärung
@@ -16,6 +17,9 @@
   \underset{\substack{\uparrow\\\mathrlap{\text{\hspace{-1em}#1}}}}{\equiv}}
 \newcommand{\circexpl}[1]{%
   \underset{\substack{\uparrow\\\mathrlap{\text{\hspace{-1em}#1}}}}{\circ}}
+
+\newcommand{\mathlll}[1]{\mathlarger{\mathlarger{\mathlarger{#1}}}}
+\newcommand{\mathll}[1]{\mathlarger{\mathlarger{{#1}}}}
 
 % META
 \date{\today}
@@ -65,8 +69,8 @@
 %\include{sections/08-raumgeometrie}
 %\include{sections/09-analytische_geometrie}
 %\include{sections/10-abbildungsgeometrie}
-%\include{sections/11-komplexe_zahlen}
-\setcounter{section}{11}
+\setcounter{section}{10}
+\include{sections/11-komplexe_zahlen}
 \include{sections/12-kombinatorik}
 
 
