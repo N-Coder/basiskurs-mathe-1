@@ -1,0 +1,161 @@
+\section{Lineare und Quadratische Gleichungen}
+
+\subsection[Lineare Gleichungen]{Definition}
+
+	Eine Gleichung der Form $ax+b=0$ mit Zahlen $a,b$ und $a\neq 0$ heißt eine \textbf{lineare Gleichung}
+	mit einer Unbestimmten.
+		
+
+\subsection{Bemerkung}
+
+	Die Lösung einer Gleichung $ax+b=0$ ist $x_1=-\frac{b}{a}$ (falls $a \neq 0$).\\
+	Die Menge $L=\{- \frac{b}{a}\}$ heißt die \textbf{Lösungsmenge} der Gleichung. \\
+	(Wenn $\frac{1}{a}$ nicht definiert ist, so gilt $L=\emptyset$.)
+	
+	
+\subsection[Quadratische Gleichungen]{Definition}
+
+	Seien $a,b,c$ Zahlen mit $a\neq 0$. Dann heißt $ax^2+bx+c=0$ eine \textbf{quadratische Gleichung}
+	mit einer Unbestimmten.
+	
+
+\subsection[Lösen einer quadratischen Gleichung über $\mathbb{R}/\mathbb{C}$]{Bemerkung (Lösen einer quadratischen Gleichung über $\mathbb{R}/\mathbb{C}$)}\todo{R/Q fett}
+
+	\begin{tabular}{@{}ll}
+	
+	1. Schritt:	& Wegen $a\neq 0$ kann man durch $a$ teilen und erhält: \\
+				& $x^2+px+q=0$ mit $p=\frac{b}{a}, q=\frac{c}{a}$ \\
+				&\\
+	2. Schritt:	& (quadratische Ergänzung) \\
+				& $\left( x+\frac{p}{2}\right) ^2 - \frac{p^2}{4}+q=0$ \\
+				&\\
+	3. Schritt:	& (Wurzel ziehen) \\
+				& $\left( x+\frac{p}{2}\right) ^2 = \frac{p^2}{4}-q=\frac{p^2-4q}{4}$ \\
+				& Ist $p^2-4q <0$, so gibt es in $\mathbb{R}$ keine Lösung. \\
+				& Ansonsten: $x+\frac{p}{2}=\pm \frac{1}{2} \sqrt{p^2-4q}$ \\
+				&\\
+				& Die Lösungen sind also \\
+				& $x_1=-\frac{p}{2}+\frac{1}{2}\sqrt{p^2-4q}$ und $x_1=-\frac{p}{2}-\frac{1}{2}\sqrt{p^2-4q}$ 	
+	
+	\end{tabular}\\
+	 ~\newline\newline
+	Die Zahl $\Delta=p^2-4q$ heißt die \textbf{Diskriminante} der Gleichung.
+	
+	
+
+\subsection[Satz von Vieta]{Satz (Vieta)}\hypertarget{vieta}{}
+
+	Seien $x_1.x_2$ die Lösungen einer quadratischen Gleichung $x^2+px+q=0$.\\
+	Dann gilt: $x_1+x_2=-p$ und $x_1 \cdot x_2=q$.\\ \newline
+	\textsc{Beweis.} Sind $x_1, x_2$ die Lösungen, so gilt:
+	\begin{align*}
+	&(x-x_1)(x-x_1)=0 \textnormal{ und somit } x^2-x_1 x-x_2 x+x_1 x_2=0,\\
+	&\textnormal{also } x^2-(x_1 + x_2)x+(x_1 x_2)=0.
+	\end{align*}\todo{centering, qed}
+	\newline 
+	\textsc{Anwendung:} Um $x^2+px+q=0$ zu lösen, finde zwei Zahlen mit Summe $-p$ und Produkt q.
+	
+	
+\subsection{Beispiele}
+
+	\begin{itemize}
+	\item $x^2-3x+2=0$ hat die Lösungen $x_1=1$ und $x_2=2$.
+	\item $x^2-4x+3, L=\{1,3\}$
+	\item $x^2+3x+2, L=\{-1,-2\}$
+	\item $x^2+x-2, L=\{1,-2\}$
+	\end{itemize}
+	
+	
+\subsection[Substitution]{Bemerkung (Substitution)}
+
+	Manchmal kann man eine Gleichung durch eine geschickte \textbf{Substitution} lösen.
+	
+	\begin{itemize}
+	\item 	Löse $x^4-7x^2+10$ in $\mathbb{R}$. Setze $y=x^2$.\\
+			Erhalte $y^2-7y+12=0$ mit $L=\{3,4\}$ und somit $x_{1/2}=\pm \sqrt{3}, x_{3/4}=\pm 2$.
+			
+	\item	Löse $x-18\sqrt{x}+17=0$ in $\mathbb{R}$. Setze $y=\sqrt{x}$.\\
+			Erhalte $y^2-18y+17=0$ mit $L=\{1,17\}$, also $\sqrt{x}=1$ und $\sqrt{x}=17$.
+			Somit sind $x_1=1$ und $x_2=289$.
+		
+	\end{itemize}
+	
+	
+\subsection[Lineare Gleichungssysteme]{Bemerkung (Lineares Gleichungssystem)}
+
+	Gegeben seien Zahlen $a_1,a_2,b_1,b_2,c_1,c_2$ mit $a_1 b_1-a_2 b_2 \neq 0$.\\
+	Dann heißt $\left\{  \begin{array}{l}
+                  			a_1x+b_1 y+c_1=0\\
+                  			a_2x+b_2 y+c_2=0
+                			\end{array}
+                \right.$ ein \textbf{lineares Gleichungssystem} mit zwei Unbestimmten $x,y$.
+                
+    \begin{enumerate}
+    \item Lösungsmethode "Einsetzen"\\
+    Ist $a_1 \neq0$, so wird $x=-\frac{b_1}{a_1}y-\frac{c_1}{a_1}$. Setze dies in die zweite Gleichung ein und
+    erhalte $a_2\left( -\frac{b_1}{a_1}y-\frac{c_1}{a_1}  \right)+b_2 y+c=0$. Löse diese lineare Gleichung 
+    und erhalte $y_1$. Dann gilt $x_1=-\frac{b_1}{a_2}y_1-\frac{c_1}{a_1}$. $L=\{(x_1,y_1)\}$.\\ \newline
+    
+   	\underline{Sonderfall:} $y$ hebt sich in der ersetzten Gleichung auf:\\
+    $a_2\cdot \left( - \frac{b_1}{a_1} \right)+b_2=0$, also $ \frac{-a_2 b_1+a_1 b_2}{a_1}=0$ und somit
+    $a_1 b_2 - a_2 c_1=0$.\\ \newline
+    In diesem Fall lautet die ersetzte Gleichung:\\
+    $a_2 \left( -\frac{c_1}{a_1}\right)+c_2=0$, also $\frac{-a_2 c_1+a_1 c_1}{a_1}=0$ und somit
+    $a_1 c_2-a_2 c_1=0$\\ \newline
+    Es gibt zwei Möglichkeiten:
+    	\begin{enumerate}
+		\item $a_1 c_2 - a_2 c_1 \neq 0 \Rightarrow L=\emptyset$
+		\item $a_1 c_2 - a_2 c_1 = 0 \Rightarrow y$ beliebig, $x=-\frac{b_1}{a_1}y-\frac{c_1}{a_1}$\\
+		Somit gilt: 
+		$L=\left\{\left( -\frac{b_1}{a_1}\cdot \lambda-\frac{c_1}{a_1},\lambda \right)\big\vert 
+		\lambda\in \mathbb{R} \right\} \subseteq \mathbb{R}^2$  
+    	
+    	\end{enumerate}
+  
+  	\item Lösungsmethode "Inderreduzieren", "Gauß-Verfahren"\\
+  	\underline{Ziel:} Bilde Linearkombinationen der beiden Gleichungen, 
+  	in denen nur eine der beiden Unbestimmten vorkommt.
+  
+    \end{enumerate}\todo{Gänsefüßchen}
+              
+
+\subsection{Beispiel}
+
+	Löse  $\left\{  \begin{array}{ll}
+                  			2x+5y=9 & \textnormal{(I)}\\
+                  			3x-4y=2 & \textnormal{(II)}
+                			\end{array}
+                \right.$\\
+                
+    $3\cdot$(I)$-2\cdot$(II):  $15y+8y=27-4$ liefert $y=1$.\\
+    Einsetzen von $y=1$ in (II) ergibt $3x=6 \Leftrightarrow x=2 \Rightarrow L=\{(2,1)\}$.
+    
+    
+\subsection[Schnittpunkt von zwei Kreisen]{Beispiel (Schnittpunkt von zwei Kreisen)}
+	
+	
+	\begin{tabular}{@{}lrl}
+	
+	Zwei Kreise seien gegeben durch: 	& $\left.  \begin{array}{l}
+                  								 		x^2+y^2+2x-6y+1=0 \\
+                  										(x+1)^2+(y-3)^2=9
+                									\end{array}
+             						 	  \right\}$ & $K_1$\\.
+
+										&&\\
+										&  $x^2+y^2-4x-4y=0 \quad$ &$K_2$
+ 
+	\end{tabular}	\newline
+	
+	Gleichung $K_1 - K_2$:  $6x-2y+6=0$, also $y=3x+3$.\\
+	Setze dies in $K_1$ (oder $K_2$) ein: $x^2+(3x+3)^2+2x-6\cdot (3x+1)+1=0$.\\
+	Liefert: $x_1=-1,\ x_2=\frac{4}{5}$, also $y_1=0,\ y_2=\frac{27}{5} \Rightarrow
+	L=\left\{(-1,0), \left(\frac{4}{5},\frac{27}{5} \right) \right\}$
+
+
+\subsection[Aufgabe]{Aufgabe (Aus einem alten chinesischem Rechenbuch)}
+
+	In einem Stall sind Hühner und Schweine.\\
+	 Es sind 40 Tiere. Zusammen haben sie 70 Füße.\\ \newline 
+	Wie viele Tiere von jeder Sorte sind es?
+	

@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper,ngerman]{article}
+
+% IMPORTS
+\usepackage[utf8]{inputenc}
+%\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts} % Buchstaben mit Doppelstrich
+\usepackage{parskip} % Absätze ohne Einrückungen
+\usepackage{mathtools} % Für Pfeil mit Erklärung
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes} % To-Dos
+\usepackage{url}
+\usepackage{hyperref}
+
+% PFEIL MIT ERKLÄRUNG
+\newcommand{\equalexpl}[1]{%
+  \underset{\substack{\uparrow\\\mathrlap{\text{\hspace{-1em}#1}}}}{\equiv}}
+\newcommand{\circexpl}[1]{%
+  \underset{\substack{\uparrow\\\mathrlap{\text{\hspace{-1em}#1}}}}{\circ}}
+
+% META
+\date{\today}
+\author{Maximilian Reif}
+\title{Basiskurs Mathematik}
+
+%--------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{titlepage}
+    \ \newline\newline\newline\newline\newline
+	\begin{center}
+		\huge Mitschrift zum \\
+		\Huge \textbf{Basiskurs Mathematik} \\
+		\huge bei Prof. Kreuzer im WS 16/17 \\
+		\normalsize
+
+		\vspace{1cm}
+		\begin{tabular}[b]{l|l}
+			\textbf{author} & Maximilian Reif \texttt{\href{mailto:reifmaxi@fim.uni-passau.de}
+			{<reifmaxi@fim.uni-passau.de>}} \\
+			\textbf{last change} & \today, version 0.6.0 \\
+			\textbf{github} & \url{www.github.com/lordreif}
+		\end{tabular}
+
+		\vspace{1cm}
+		
+	\end{center}
+   
+	
+\end{titlepage}
+
+\setcounter{page}{2}
+
+\newpage
+\tableofcontents \thispagestyle{empty}
+\newpage
+
+\include{sections/01-ganze_zahlen}
+\include{sections/02-reelle_zahlen}
+\include{sections/03-buchstaben}
+\include{sections/04-gleichungen}
+\include{sections/05-ungleichungen}
+\include{sections/06-ebene_geometrie}
+%\include{sections/07-trigonometrie}
+%\include{sections/08-raumgeometrie}
+%\include{sections/09-analytische_geometrie}
+%\include{sections/10-abbildungsgeometrie}
+%\include{sections/11-komplexe_zahlen}
+\setcounter{section}{11}
+\include{sections/12-kombinatorik}
+
+
+\end{document}

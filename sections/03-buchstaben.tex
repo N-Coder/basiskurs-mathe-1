@@ -1,0 +1,145 @@
+\section{Rechnen mit Buchstaben}
+
+Seien $a,b,c,\dots$ Buchstabensymbole.\\
+
+\begin{tabular}{ll}
+\textsc{Frage.} & Was ist $(x-a) \cdot (x-b) \cdot (x-c) \cdot  \cdots \cdot (x-z)$?\\
+\textsc{Hinweis.}& Betrachte den 24. Faktor!
+\end{tabular}
+
+
+\subsection[Definition Term/Koeffizient/Monom/Polynom]{Definition}
+	
+	\begin{enumerate}
+	\item Ein Produkt der Form $(a^{n_a}\cdot b^{n_b}\cdot c^{n_c} \ldots)$ mit $n_a,n_b,n_c,\ldots \in \mathbb{N}$
+	 heißt \textbf{Term}.	\\
+	 Beachte: $a^2bc=caba=acab$ etc. (Kommutativgesetz)
+	 
+	 \item Ein Ausdruck der Form $c\cdot t$ mit einem \textbf{Koeffizienten} $c\in \mathbb{R}$ 
+	 und einem Term $t$ heißt \textbf{Monom}.
+	 \item Eine entliche Summe von Monomen heißt \textbf{Polynom}.	
+	
+	\end{enumerate}
+	
+	
+\subsection[Rechenregeln für Polynome]{Bemerkung (Rechenregeln für Polynome)}
+
+	Seien $f,g,h,\dots$ Polynome.
+
+	\begin{enumerate}
+	\item Distributivgesetze:
+		\begin{align*}
+		f \cdot(g+h)&=f \cdot g + f \cdot h 
+		\textnormal{ (bedeutet } (f \cdot g)+(f \cdot h) \textnormal{ "Punkt vor Strich") } \\
+		(f+g)\cdot h &= f \cdot h + g \cdot h
+		\end{align*}
+	
+	\item Kommutativgesetz:
+		\begin{align*}
+		f \cdot g = g \cdot f,\quad f+g=g+f
+		\end{align*}
+	\item Assoziativgesetz:
+		\begin{align*}
+		(f \cdot g) \cdot h = f \cdot (g  \cdot h), \quad (f+g)+h=f+(g+h)		
+		\end{align*}
+		Die Klammern können auch ganz weggelassen werden.
+		
+	\item Prioritätsregel: \quad Exponent vor Punkt vor Strich!
+		\begin{align*}
+		f^2g+h= ((f \cdot f) \cdot g)+h
+		\end{align*}
+	
+	\end{enumerate}
+	\todo{Gänsefüßchen}
+	
+	
+\subsection[Beispiele und Formeln]{Beispiele}
+
+	\begin{enumerate}
+	\item (Erste binomische Formel)
+		\begin{align*}
+		(a+b)^2=a^2+2ab+b^2		
+		\end{align*}
+				
+	\item (Zweite binomische Formel)
+		\begin{align*}
+		(a-b)^2=a^2-2ab+b^2		
+		\end{align*}
+		
+	\item (Dritte binomische Formel)
+		\begin{align*}
+		(a+b)\cdot (a-b)=a^2-b^2		
+		\end{align*}		
+		
+	\item (Teleskopsumme)			
+		\begin{align*}
+		1-a^{n+1} = (1 + a + a^2 + a^3 + \cdots + a^n) \cdot (1-a)
+		\end{align*}
+
+	\item $1+a^n = (1 - a + a^2 - a^3 + \cdots + a^{n-3} - a^{n-2} + a^{n-1}) \cdot (1+a)$ falls~$n$~ungerade
+	\item $a^n - b^n=(a-b)(a^{n-1}+a^{n-2}b+\ldots +ab^{n-2}+b^{n-1})$
+	\item $a^n + b^n = (a+b) \cdot (a^{n-1} - a^{n-2} b + a^{n-3} b^2 -+ \cdots b^{n-1})$ falls~$n$~ungerade
+	\item $a^3 + b^3 = (a+b) \cdot (a^2 - ab + b^2)$
+	
+	\end{enumerate}
+	
+	
+\subsection[Rechenregeln für symbolische Berechnungen]{Bemerkung (Rechenregeln für symbolische Berechnungen)}
+
+	\begin{enumerate}
+	\item 	\begin{align*}
+			(-1)(-1) = 1 \\
+			(-1)(+1)=-1 \\
+			(-x)(-y)=xy
+			\end{align*}
+	
+	\item (Ausklammern)\\ Man kann die Distributivgesetze oft "andersherum" anwenden:
+			\begin{align*}
+			ab+a+b+1=a\cdot (b+1)+(b+1)=(a+1)(b+1)\\
+			x^2+3x+2= (x+1)(x+2) \quad \textnormal{(\hyperlink{vieta}{Vieta})}		
+			\end{align*}
+	
+	\end{enumerate}\todo{Gänsefüschen, Link to Vieta}
+
+\subsection[Der Grad]{Definition}
+
+	\begin{enumerate}
+	\item Ist $t=x_1^{\alpha_1}\cdot \ldots \cdot x_n^{\alpha_n}$ ein Term, so heißt 
+	$deg(t)= \alpha_1+ \ldots +\alpha_n$ der \textbf{Grad} von $t$.
+	
+	\item Ist $f=c_1 t_1 + \ldots + c_s t_s$ ein Polynom mit $c_1 \neq 0, \ldots , c_s \neq 0$ so heißt
+	$deg(f)=max\{deg(t_1), \ldots , deg(t_s) \}$ der \textbf{Grad} von $f$.
+	
+	
+	\item Ist $f=c_1 t_1 + \ldots + c_s t_s$ ein Polynom mit $c_1 \neq 0, \ldots , c_s \neq 0$ und gilt
+	$deg(t_1)=\ldots=deg(t_s)$, so heißt $f$ ein \textbf{homogenes Polynom}.	
+	
+	\end{enumerate}
+
+
+\subsection{Beispiele}
+
+	\begin{itemize}
+	\item Das Polynom $f=x^3+y^3$ ist homogen vom Grad 3. 
+	\item Das Polynom $p=x^4+4y^4$ ist homogen vom Grad 4.
+	
+	\end{itemize}
+	
+	
+\subsection[Rationale Funktion]{Definition}
+
+	Seien $f,g$ Polynome mit $g \neq 0$. Dann heißt $\frac{f}{g}$ eine \textbf{rationale Funktion}.
+	
+	
+\subsection{Bemerkung}
+
+	Man kann mit rationalen Funktionen entsprechend der Bruchregeln rechnen.
+	
+	
+\subsection{Beispiele}
+
+	\begin{itemize}
+	\item $\frac{1}{x-1}-\frac{1}{x+1}= \frac{(x+1)-(x-1)}{x^2-1}=\frac{2}{x^2-1}$
+	\item $\frac{x}{y}-\frac{y}{x}=\frac{x^2-y^2}{xy}$
+	\item $\frac{x^2-y^2}{x+y}=\frac{(x-y)(x+y)}{x+y}=x-y$
+	\end{itemize}

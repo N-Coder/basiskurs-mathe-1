@@ -1,0 +1,223 @@
+\section{Ungleichungen}
+
+Seien $f,g$ Polynome in Unbestimmten $x_1,x_2,\dots,x_n$ (oder $x,y,z$) mit Koeffizienten aus $\mathbb{R}$.
+
+\subsection{Definition}
+
+	Es gibt 5 Typen von Ungleichungen:
+	
+	\begin{enumerate}
+	\item $f\leq g$
+	\item $f\geq g$
+	\item $f<g$
+	\item $f>g$
+	\item $f\neq g$
+	\end{enumerate}
+	
+	\underline{Interpretation:} $f\leq g$ bedeutet, dass die Ungleichung gelten soll, wenn man für $x_1,\dots,x_n$
+	Zahlen (aus einem Definitionsbereich $D\subseteq \mathbb{R}^n$) einsetzt.
+	
+	
+\subsection{Beispiele}
+
+	\begin{itemize}
+	\item Für $x\in \mathbb{R}$ gilt: $x^2\geq 0$.
+	\item Für $x,y \in \mathbb{R}$ gilt: $x^2+y^2\geq 2xy$\\ \newline
+	\textsc{Beweis.}\begin{align*}
+					(x-y)^2 &\geq 0 \\
+					\Leftrightarrow x^2 -2xy +y^2 &\geq 0 \\
+					\Leftrightarrow x^2+y^2 &\geq 2xy
+					\end{align*}\\
+	\textsc{Folgerung:} Für $x,y\geq 0$ gilt: $\quad  \underbrace{\sqrt{xy}}_{\textnormal{geometrisches Mittel}}
+						\leq \underbrace{\sqrt{\frac{x^2+y^2}{2}}}_{\textnormal{quadratisches Mittel}}$
+						
+	\item Arithmetisches Mittel:  $\frac{x+y}{2}\leq \sqrt{xy}$		
+	
+	\end{itemize}\todo{Größenverhätnisse}
+
+
+\subsection[Rechenregeln für Ungleichungen]{Bemerkung (Rechenregeln für Ungleichungen)}
+
+	\begin{enumerate}
+	\item 	\begin{itemize}
+			\item $f \leq g$ ist äquivalent mit $g \geq f$
+			\item $f<g$ ist äquivalent mit $g>f$
+			\item $f \leq g$ ist äquivalent mit $[f<g$ oder $f=g]$
+			\item $f \neq g$ ist äquivalent mit $[f<g$ oder $f>g]$
+			\end{itemize}	
+	
+	\item Sei $h$ ein weiteres Polynom.\\ Dann ist $f \leq g$ äquivalent mit $f+h \leq g+h$.	
+	\item $f \leq g$ ist äquivalent mit $-f\geq -g$
+	\item Gilt $f \leq g$ und $h \geq 0$ so folgt $f \cdot h \leq g \cdot h$ \\
+	Gilt $f \leq g$ und $h \leq 0$ so folgt $f \cdot h \geq g \cdot h$
+	\item Für $0<f \leq g$ gilt $0 < \frac{1}{g} \leq \frac{1}{f}$
+	
+	\end{enumerate} 
+
+	Eine Ungleichung zu lösen bedeutet, alle $(x_1,\dots,x_n)\in \mathbb{R}^n$ zu finden, 
+	für die die Ungleichung gilt.
+	
+	
+\subsection{Beispiel}
+
+	Löse  $\left\{  \begin{array}{ll}
+                  			3x-4y \leq 1	& \textnormal{(I)}\\
+                  			x+y \geq 2		& \textnormal{(II)}
+                			\end{array}
+                \right.$.\\ \newline \newline
+     \underline{Skizze:}\todo{Skizze}
+     
+     
+	$\left.  \begin{array}{ll}
+             
+                \textnormal{(II)':}			& -x-y\geq -2								\\
+                \textnormal{(I)+3(II)':}	& -7y \leq 5 \Rightarrow y \geq \frac{5}{7} \\ \hline
+                \textnormal{aus (II):}		& x \geq 2-y								\\ \hline
+     			\textnormal{aus (I):}		& y\leq \frac{1}{3}+\frac{4}{3}y                
+                
+              \end{array} 	  \right\}$ Es folgt: $L=\left\{ \left( x,y \right) \in \mathbb{R}^2 
+              | y\geq \frac{5}{7} \land 2-y \leq x \leq \frac{1}{3}+\frac{4}{3}y \right\}$
+              
+              
+\subsection{Bemerkung}
+
+	Ist $h: \mathbb{R} \rightarrow \mathbb{R}$ monoton steigend, (das heißt aus $x\leq y$ folgt $h(x)\leq h(y)$,)
+	so gilt:
+	
+	\begin{align*}
+	\textnormal{Aus } f \leq g \textnormal{ folgt } h &\circexpl{Komposition} f \leq h \circ g.
+	\end{align*}	
+	
+	
+\subsection{Beispiele}
+
+	\begin{itemize}
+	\item Die Funktion $h: \mathbb{R}_0^+ \rightarrow \mathbb{R}_0^+, x\mapsto\sqrt{x}$ ist monoton steigend.\\
+	Somit folgt aus $0 \leq f \leq g$ die Ungleichung $0 \leq \sqrt{f} \leq \sqrt{g}$.
+	
+	\item Die Abbildung $\ln: \mathbb{R}_+ \rightarrow \mathbb{R}, x\mapsto\ln(x)$ ist monoton steigend.\\
+	Aus $0 \leq f \leq g$ die Ungleichung $0 \leq \ln(f) \leq \ln(g)$.
+	\end{itemize}
+	
+	
+\subsection{Beispiel}
+
+	Löse die Ungleichung $x^2-\frac{1}{2}x-\frac{1}{2} \geq 0$ in $\mathbb{R}$.\\ \newline
+	Quadratische Ergänzung:
+	\begin{align*}
+	\left( x - \frac{1}{4} \right) ^2 \geq \frac{1}{2} + \frac{1}{16} = \frac{9}{16}
+	\end{align*}
+	\underline{Fallunterscheidung!}\\
+	
+	\begin{enumerate}
+	\item Fall: $x-\frac{1}{4} \geq 0$: Wurzelziehen ist erlaubt.\\
+	...und liefert: $x-\frac{1}{4}$, also $x\geq 1$.\\ \newline
+	Die Lösungsmenge im 1. Fall ist also:\\
+	$L_1=\left\{x\in\mathbb{R}|x\geq\frac{1}{4} \land x\geq 1\right\}=\{x\in\mathbb{R}|x\geq 1\}$
+	
+	\item Fall: $x-\frac{1}{4}<0$, also $\frac{1}{4}-x>0$\\
+	Die Ungleichung $(\frac{1}{4}-x)^2\geq \frac{9}{16}$ liefert 
+	$\frac{1}{4}-x\geq\frac{3}{4}$, also $x\leq -\frac{1}{2}$\\ \newline
+	\textit{Anmerkung des Autors: in der Klammer wurde -1 ausgeklammert, da diese beim Quadrieren belanglos ist.
+	Eine (einfachere) Alternative ist \ref{betrag}.}\\
+	\newline Dies zeigt $L_2=\left\{ x\in\mathbb{R}|x<\frac{1}{4} \land x\leq -\frac{1}{2}\right\} =
+	\left\{ x\in \mathbb{R}|x\leq -\frac{1}{2}\right\}$
+	\end{enumerate}
+	~\newline
+	Insgesamt ergibt sich die Lösungsmenge
+	$L=L_1\cup L_2=\left\{ x\in\mathbb{R}|x\geq 1\lor x\leq -\frac{1}{2} \right\}$.
+	
+	
+\subsection[Betrag]{Definition}
+
+	Für jedes $x\in \mathbb{R}$ heißt\\ 
+	
+	$\vert x \vert \left\{  \begin{array}{cl}
+                  			x 	&\textnormal{ für } x \geq 0\\
+                  			-x 	&\textnormal{ für } x<0
+                			\end{array}
+                \right.$     der \textbf{(Absolut-)Betrag} von $x$.
+                
+                
+\subsection{Beispiel}\label{betrag}
+
+	Im letzten Beispiel folgt aus $\left( x-\frac{1}{4} \right)^2$ die Ungleichung 
+	$\vert x-\frac{1}{4}\vert \geq \frac{3}{4}$
+	
+	
+\subsection[Betragsungleichungen]{Beispiel}
+
+	Löse die Ungleichung $\vert x+1 \vert + \vert x-1 \vert \leq 2$.\\ 
+	
+	\underline{Fallunterscheidung!} \newline
+	
+	\begin{enumerate}
+	\item Fall: $x<-1$\\
+	Die Ungleichung lautet $-(x+1)-(x-1)\leq 2$ und somit $x \geq -1$.\\
+	Dies liefert $L_1=\emptyset$
+	\item Fall: $-1 \leq x<1$\\
+	Die Ungleichung lautet $(x+1)-(x-1)\leq 2$ und somit $2 \leq 2$.\\
+	Somit folgt $L_2=\{ x\in \mathbb{R}|-1\leq x\leq 1 \}$
+	\item Fall: $x\geq 1$\\
+	Die Ungleichung lautet $(x+1)+(x-1)\leq 2$ und somit $x \leq 1$.\\
+	Dies zeigt $L_3=\{1\}$.
+	
+	\end{enumerate}
+	~\newline
+	Insgesamt erhalten wir $L=L_1\cup L_2\cup L_3 = \{x\in\mathbb{R}|-1\leq x \leq 1 \}$.
+	
+	
+\subsection{Dreiecksungleichung}
+
+	\begin{enumerate}
+	\item Für $x,y \in \mathbb{R}$ gilt: $\vert x+y \vert \leq \vert x \vert + \vert y \vert$
+	(\textbf{Dreiecksungleichung})
+	\item Es gilt für alle $x,y \in \mathbb{R}$ die \textbf{umgekehrte Dreiecksungleichung}:
+	$\big\vert \vert x \vert - \vert y \vert \big\vert \leq \vert x+y\vert$
+	\end{enumerate}
+	
+	\textsc{Beweis.}
+	\begin{enumerate}
+	\item Aus $xy \leq \vert x\vert \cdot \vert y\vert = \vert xy \vert$ folgt
+	$x^2+2xy+y^2 \leq {\vert x \vert}^2+2\vert x \vert \vert y \vert + {\vert y \vert}^2$,
+	also $(x+y)^2 \leq (\vert x \vert + \vert y \vert)^2$.\\
+	Da $\vert x+y\vert, \vert x \vert$ und $\vert y \vert$ nicht negativ sind, ist Wurzelziehen erlaubt.
+	
+	\item Nach 1. gilt $\vert x \vert \leq \vert x+y\vert + \vert -y \vert = \vert (x+y)-y \vert$\\
+	und somit $\vert x+y \vert \geq \vert x \vert - \vert y \vert$.\\
+	Andererseits gilt, ebenfalls nach 1., die Ungleichung\\ 
+	$\vert x+y-x\vert = \vert y \vert \leq \vert x+y \vert + \vert -x \vert = \vert x+y \vert + \vert x \vert$\\
+	und somit $\vert x+y \vert \geq \vert y \vert - \vert x \vert$.\\ \newline
+	Kombiniert man beide Erkenntnisse, so folgt 
+	$\vert x+y \vert \geq \big\vert \vert x \vert - \vert y \vert\big \vert$.
+	\end{enumerate}\todo{qed}
+	
+	
+\subsection{Beispiel}
+
+	Löse $\sqrt{2x-1} < x+1$ für $x\in \mathbb{R}$.\\ \newline
+	Damit die Wurzel definiert ist, muss gelten $2x-1\geq 0$, also $x\geq \frac{1}{2}$.\\
+	Dann ist die rechte Seite positiv und Quadrieren erlaubt.\\ \newline
+	Es folgt: $2x-1<x^2+2x+1$, also $x^2>-2$.\\ \newline
+	Insgesamt erhalten wir: $L=\{ x\in \mathbb{R}| x\geq 0,5\}$.
+	
+	
+\subsection{Beispiel}
+
+	Löse $\sqrt{x^2+1}>x+1$ in $\mathbb{R}$.\\
+	
+	\begin{enumerate}
+	\item Fall: $x+1<0$.\\
+	In diesem Fall gilt $\sqrt{x^2+1}>0>x+1$,\\
+	also $L_1=\{x\in\mathbb{R}|x<-1\}$.
+	\item Fall: $x+1\geq 0$.\\
+	Jetzt ist Quadrieren eine Äquivalenzumformung und es folgt $x^2+1>x^2+2x+1$, also $x<0$.\\
+	Dies liefert $L_2=\{x\in\mathbb{R}|-1\geq x <0 \}.$
+	\end{enumerate}
+	~\newline
+	Insegeamt folgt: $L=L_1\cup L_2 = \{x\in \mathbb{R}|x<0\}$.
+		
+	
+	
+	
+         
