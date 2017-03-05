@@ -1,1 +1,349 @@
 \section{Ebene Geometrie}
+	
+	Die Grundlage der ebenen Geometrie ist die \textbf{Zeichenebene}. Nach der Einführung von rechtwinkligen
+	(kartesischen) Koordinaten ist dies die Menge~$\mathbb{R}^2$. Genauer gesagt ist sie der 
+	\textbf{2-dimensionale affine Raum} über $\mathbb{R}$ und wird mit $\mathbb{A}^2(\mathbb{R)}$ bezeichnet.\\
+	Die Elemente von $\mathbb{A}^2(\mathbb{R)}$ heißen \textbf{Punkte}.\\
+	Zu je zwei verschiedenen Punkten in	$\mathbb{A}^2(\mathbb{R)}$ gibt es genau eine \textbf{Gerade},
+	die diese enthält.\\
+	\newline
+	\underline{Notation:}
+	\begin{itemize}
+	\item $A,B,\dots\in\mathbb{A}^2(\mathbb{R)}$ Punkte
+	\item $G=AB$ Gerade durch die Punkte $A$ und $B$
+	\item $[AB]$ Strecke von $A$ nach $B$
+	\item $a=\overline{AB}$ Länge der Strecke $[AB]$
+	\end{itemize}
+	
+	
+\subsection{Definition}
+
+	Seien $A,B,C\in\mathbb{A}^2(\mathbb{R)}$ drei \textbf{nicht kollineare} (=nicht auf einer Gerade) Punkte.\\
+	Dann heißt die Vereinigung der Strecken $[AB],[BC]$ und $[CA]$ das \textbf{Dreieck} mit den
+	\textbf{Seiten(längen)} $a=\overline{BC},b=\overline{AC},c=\overline{AB}$. \todo{Skizze}
+	Die Punkte $A,B,C$ heißen die \textbf{Ecken} des Dreiecks.\\ \newline
+	\underline{Notation:} $\Delta ABC$ (Nummerierung \underline{gegen} den Uhrzeigersinn!)\\
+	\newline
+	Die Winkel an den Ecken des Dreiecks werden mit $\alpha =\angle BAC, \beta =\angle CBA, \gamma =\angle ACB$
+	bezeichnet.
+	
+	
+\subsection[Das gleichseitige Dreieck]{Beispiel (Das gleichseitige Dreieck)}
+
+	Es gelte: $a=b=c$. Dann heißt $\Delta ABC$ ein \textbf{gleichseitiges Dreieck}.\todo{Skizze}
+	
+	
+\subsection[Der Innenwinkelsummensatz]{Satz}
+
+	In einem Dreieck $\Delta ABC$ gilt $\alpha+\beta+\gamma=180^{\circ}=\pi$.
+	
+	
+\subsection[Das Bogenmaß]{Definition (Bogenmaß)}
+
+	Im \textbf{Bogenmaß} gilt $180^{\circ}=\pi,360^{\circ}=2\pi,90^{\circ}=\frac{\pi}{2}$ usw.\\
+	Es entspricht der Länge des Kreisbogens auf dem Einheitskreis, der diesem Winkel entspricht.
+	
+	
+\subsection{Beispiel}
+
+	Im gleichseitigen Dreieck gilt: $\alpha=\beta=\gamma=60^{\circ}=\frac{\pi}{3}$.
+	
+	
+\subsection[Das gleichschenklig-rechtwinklige Dreieck]{Beispiel}
+
+	Das\textbf{gleichschenklig-rechtwinklige Dreieck} erfüllt $\alpha=\beta=45^{\circ}$ und $\gamma=90^{\circ}$.\\
+	Ein $90^{\circ}$-Winkel heißt auch \textbf{rechter Winkel} und wird auch wie folgt notiert: \todo{Skizze}
+	
+	
+\subsection{Bemerkung}
+
+	\begin{enumerate}
+	\item Die Winkel an einer Geradengleichung erfüllen \textsc{Skizze} mit $\alpha+\beta=180^{\circ}$.
+	\item Werden zwei \textbf{parallele} Geraden (d.h. Geraden, die sich nicht schneiden) von einer dritten
+	Gerade geschnitten, so gilt: \textsc{Skizze} ("Z-Winkelsatz") $\alpha+\beta=180^{\circ}$
+	\end{enumerate}\todo{Skizze, Gänsefüßchen}
+	
+	
+\subsection[Der allgemeine Innenwinkelsummensatz]{Satz}
+
+	Die Summe der Innenwinkel in einem \textbf{konvexen} $n$-Eck (d.h. die Strecke von einem Punkt des $n$-Ecks
+	zu einem anderen liegt vollständig im Inneren) beträgt $(n-2)\cdot 180^{\circ}$.\\
+	\newline
+	\textsc{Beweis.}\todo{Skizze}\\
+	Ausgehend von einer Ecke $A$ zeichne die Diagonalen zu den nicht anliegenden Ecken ein. Diese zerlegen das
+	$n$-Eck in $n-2$ Dreiecke. Aus der Aufteilung der Außenwinkel folgt, dass die Winkelsumme im $n$-Eck gleich
+	der $n-2$ Dreiecke ist und es folgt die Behauptung.\todo{qed}
+	
+	
+\subsection[Das reguläre $n$-Eck]{Beispiel (Das reguläre $n$-Eck)}
+
+	Das reguläre $n$-Eck hat $n$ Ecken, $n$ gleich lange Seiten und $n$ gleich große Innenwinkel.\todo{Skizze}
+	
+	
+\subsection[Besondere Linien im Dreieck]{Definition (Besondere Linien im Dreieck)}
+
+	\begin{enumerate}
+	\item Fällt man von einer Ecke das Lot auf die gegenüberliegende Gerade, so heißt die entstehende Stecke
+	eine \textbf{Höhe} des Dreiecks.\\
+	\underline{Notation:} $h_a,h_b,h_c$
+	
+	\item Verbindet man eine Ecke des Dreiecks mit dem Mittelpunkt der gegenüberliegenden Seite, so heißt die
+	entstehende Strecke eine \textbf{Seitenhalbierende}.\\
+	\underline{Notation:} $s_a,s_b,s_c$
+	
+	\item Fällt man auf die Mittelpunkte der Seiten einers Dreiecks die Lote, so heißen diese die
+	\textbf{Mittelsenkrechten} des Dreiecks.\\
+	\underline{Notation:} $M_a,M_b,M_c$
+	
+	\item Zeichnet man im Dreieck $\Delta ABC$ jeweils die Geraden ein, die die Winkel $\alpha,\beta,\gamma$
+	halbieren, bezeichet man diese als \textbf{Winkelhalbierende}.\\
+	\underline{Notation:} $W_{\alpha},W_{\beta},W_{\gamma}$
+	\end{enumerate}\todo{Skizzen}
+
+
+\subsection[Kongruente Dreiecke]{Definition (Kongruente Dreiecke)}	
+
+	\begin{enumerate}
+	\item Zei Teilmengen $T_1,T_2$ von $\mathbb{A}^2(\mathbb{R})$ heißen \textbf{kongruent} 
+	(oder \textbf{deckungsgleich}), wenn sie durch eine \textbf{Bewegung} (hier: durch Verschiebungen,
+	Rotationen, Spiegelungen) ineinander überführbar sind. Statt Bewegung sagt man auch oft
+	\textbf{Kongruenzabbildung}.
+	
+	\item Eine Abbildung $\varphi:\mathbb{A}^2(\mathbb{R})\rightarrow\mathbb{A}^2(\mathbb{R})$ heißt 
+	\textbf{Kongruentabbildung}, wenn wie Längen und Winkel erhält.
+	
+	\end{enumerate}
+	
+	
+\subsection[Die Kongruenzsätze im Dreieck]{Satz (Die Kongruenzsätze im Dreieck)}	
+	
+	Zwei Dreiecke $\Delta ABC$ und $\Delta A'B'C'$ sind kongruent, wenn eine der folgenden Bedingungen erfüllt
+	ist:
+	
+	\begin{enumerate}
+	\item (sss-Satz) Die Seitenlängen sind paarweise gleich.
+	\item (sws-Satz) Zwei Seitenlängen und der eingeschlossene Winkel sind jeweils gleich.
+	\item (wsw-Satz) Zwei entsprechende Seitenlängen und die jeweils anliegenden Winkel sind gleich.
+	\end{enumerate}
+	
+	
+\subsection[Besondere Punkte im Dreieck]{Satz}
+
+	\begin{enumerate}
+	\item Die drei Mittelsenkrechten eines Dreiecks schneiden sich in einem Punkt. Der Schnittpunkt ist der 
+	\textbf{Umkreismittelpunkt} des Dreiecks.
+	\item Die Winkelhalbierenden schneiden sich in einem Punkt. Der Schnittpunkt ist der
+	\textbf{Innkreismittelpunkt} des Dreiecks.
+	\item Die drei Seithenhalbierenden eines Dreiecks schneiden sich in einem Punkt. dieser Punkt ist der
+	\textbf{Schwerpunkt} des Dreiecks.
+	\item Die drei Höhen des Dreiecks schneiden sich in einem Punkt ("\textbf{Höhenschnittpunkt}").	
+	\end{enumerate}\todo(Skizze,Gänsefüßchen,Beweis)
+	
+	
+\subsection[Die Fläche des Dreiecks]{Satz (Fläche des Dreiecks)}
+
+	Die Fläche $F$ des Dreiecks $\Delta ABC$ ist gegeben durch $F=\frac{1}{2}\cdot c \cdot h_c$.\todo{Skizze}\\
+	\newline
+	\textsc{Beweis.} $F=F_1+F_2=\frac{1}{2}\cdot p \cdot h_c + \frac{1}{2}\cdot q \cdot h_c =
+	\frac{1}{2}h_c(p+c)=\frac{1}{2}\cdot c\cdot h_c$\todo{qed}
+	
+	
+\subsection[Das rechtwinklige Dreieck]{Beispiel (Rechtwinkliges Dreieck)}
+
+	Ist in einem Dreieck einer der Innenwinkel gleich $90^{\circ}$, so heißt es ein 
+	\textbf{rechtwinkliges Dreieck}. Dann heißt $[AB]$ die \textbf{Hypotenuse} des Dreiecks und $[BC],[AC]$ heißen 
+	die \textbf{Katheten} des Dreiecks.\\
+	Es gilt: $\alpha+\beta=90^{\circ}$.
+	
+	
+\subsection[Der Satz des Thales]{Satz (Der Satz des Thales)}
+
+	Ist $M$ der Mittelpunkt der Hypotenuse und zeichnet man den Kreis um $M$ mit Radius $\frac{c}{2}$, so liegt
+	die Ecke $C$ auf diesem Kreis. Er heißt \textbf{Thaleskreis} des Dreiecks.\\
+	\newline
+	Umgekehrt gilt: Liegt die Eckt $C$ auf dem Kreis um den Mittelpunkt $M$ von $[AB]$ mit Radius $\frac{c}{2}$,
+	so ist das Dreieck $\Delta ABC$ rechtwinklig mit $\gamma=90^{\circ}$.
+	\todo{Beweise+Skizzen}
+	
+	
+\subsection[Die zentrische Streckung]{Definition (Zentrische Streckung)}	
+	
+	Eine \textbf{zentrische Streckung (Homothetie)} mit Zentrum $Z$ und Streckungsfaktor $\lambda\in\mathbb{R}_+$
+	ist die Abbildung, die jedem Punkt $P$ abbildet auf den Punkt $Q$ auf der Halbgeraden $[ZP$, der von $Z$ (in
+	Richtung $P$) die Entfernung $\lambda\cdot \overline{ZP}$ besitzt. \todo{Skizze}\\
+	\newline
+	Zentrische Streckungen sind winkelerhaltend.
+	
+	
+\subsection[Der Strahlensatz]{Satz (Der Strahlensatz)}
+
+	Gegeben seien zwei Geraden, die sich in einem Punkt $Z$ schneiden. Diese Geraden $G_1,G_2$ werden von zwei
+	parallelen Geraden $H_1,H_2$ geschnitten. Die Schnittpunkte seien $A,A',B,B'$.\todo{Skizze}\\
+	\newline
+	
+	\begin{tabular}{cccc}
+	Setze	& $a=\overline{ZA}$	& $a'=\overline{ZA'}$	& $a''=\overline{AA'}$\\
+			& $b=\overline{ZB}$	& $b'=\overline{ZB'}$	& $b''=\overline{BB'}$\\
+			& $c=\overline{AB}$	& $c'=\overline{A'B'}$	&
+	\end{tabular}
+	~\newline
+	\begin{enumerate}
+	\item Strahlensatz
+	\begin{align*}
+	\frac{a}{a'}=\frac{b}{b'} \textnormal{ und } \frac{a}{a''}=\frac{b}{b''}
+	\end{align*}
+	
+	\item Strahlensatz
+	\begin{align*}
+	\frac{a}{a'}=\frac{b}{b'}=\frac{c}{c'}
+	\end{align*}
+	
+	\item Umkehrung des 1. Strahlensatz
+	\begin{align*}
+	\textnormal{Gilt } \frac{a}{a'}=\frac{b}{b'} \textnormal{ so folgt } H_1\parallel H_2.
+	\end{align*}
+	\end{enumerate}
+	
+	Vorsicht: Die Umkehrung des 2. Strahlensatzes gilt \underline{nicht}.\todo{Blitz}\\
+	\newline\newline
+	
+	
+	\textsc{Beweis.}
+	\begin{enumerate}
+	\item Betrachte die zentrische Streckung mit dem Zentrum $Z$ und dem Streckungsfaktor $\frac{a'}{a}$.\\
+	Bei der zentrischen Streckung wird $H_1$ in eine parallele Gerade abgebildet, denn würde sich $H_1$ und ihr
+	Bild in einem Punkt schneiden, so wäre dieser Punkt ein Fixpunkt ungleich $Z$ der Abbildung, was für
+	$\lambda\neq 1$ nicht geht.\\
+	Also wird $H_1$ auf $H_2$ abgebildet. Somit wird $B$ auf $B'$ abgebiltet und 
+	$\frac{b'}{b}=\lambda=\frac{a'}{a}$.	
+	
+	\item Die Strecke $[AB]$ wird bei der zentrische Streckung auf $[A'B']$ abgebildet, also gilt
+	$\frac{c'}{c}=\lambda=\frac{a'}{a}$.
+	
+	\item Nach Voraussetzung wird bei der zentrischen Streckung mit $\lambda=\frac{a'}{a}$ sowohl $A$ in $A'$
+	also auch $B$ in $B'$ überführt. Also wird $[AB]$ in $[A'B']$ überführt und es folgt $A'B'\parallel AB$.
+	\end{enumerate}\todo{qed}
+	
+	
+\subsection[Ähnlichkeit]{Definition}
+
+	Zwei ebene geometrische Figuren heißen \textbf{ähnlich}, wenn es eine Kongruenzabbildung und eine
+	anschließende zentrische Streckung gibt, die die eine in die andere überführt.
+	
+	
+\subsection{Korollar}
+
+	Sind zwei ebene geometrische Figuren ähnlich, so sind entsprechende Winkel gleich und entsprechende
+	Streckenlängen stehen in einem festen Verhältnis $\lambda$.
+	
+	
+\subsection{Beispiel}
+
+	Der Schwerpunkt eines Dreiecks teilt die Seitenhalbierenden im \mbox{Verhältnis $2:1$}.\\
+	\newline
+	\textsc{Beweis.}\todo{Skizze}\\
+	Zeichne die Parallele zu $CM_c$ durch $M_a$. Ihr Schnittpunkt mit der Seite $[AB]$ sei $P$.\\
+	Nach dem Strahlensatz gilt: $\frac{\overline{BM_c}}{\overline{BP}}=\frac{\overline{BC}}{BM_a}=\frac{2}{1}
+	=\frac{\overline{BS}}{BQ}$.\\
+	Strahlensatz mit Zentrum $A$: Die Geraden $AM_a$ und $AB$ werden von zwei paralleln Geraden geschnitten:
+	$\frac{\overline{AM_a}}{\overline{AS}}=\frac{\overline{BC}}{\overline{BM_a}}=\frac{3}{2}$\todo{WTF?!? qed}
+	
+	
+\subsection[Die Satzgruppe des Pythagoras]{Satz (Die Satzgruppe des Pythagoras)}
+
+	Sei $\Delta ABC$ ein rechtwinkliges Dreieck mit $\gamma=90^{\circ}$.
+	\begin{enumerate}
+	\item (Satz des Pytagoras, ca. 540 v. Chr.)\\
+	\begin{align*}
+	a^2+b^2=c^2
+	\end{align*}
+	
+	\item (Umkehrung des Satzes von Pytagoras)\\
+	Gilt in einem Dreieck $\Delta ABC$ die Gleichung $a^2+b^2=c^2$, so ist $\Delta ABC$ rechtwinklig mit 
+	$\gamma = 90^{\circ}$.
+	
+	\item (Höhensatz)\\
+	\begin{align*}
+	h^2=pq, \textnormal{ wobei } h=h_c \textnormal{ und } p,q \textnormal{ \textbf{Hypotenusenabschnitte}}.
+	\end{align*}
+	
+	\item (Kathetensatz)
+	\begin{align*}
+	a^2=cq \textnormal{ und } b^2=cp
+	\end{align*}
+	\end{enumerate}\todo{Skizze}
+	~\newline\newline
+	
+	\textsc{Beweis.}
+	
+	\begin{enumerate}
+	\item Die äußeren Dreiecke sind kongruent.
+	\begin{align*}
+	\Rightarrow (a+b)^2=c^2+4(\frac{1}{2}ab)=c^2+2ab\Rightarrow a^2+b^2=c^2
+	\end{align*}
+	
+	\item Konstruiere das rechtwinklige Dreieck $\Delta A'B'C'$ mit den Seitenlängen $a.b.c$ und Katheten $a,b$.\\
+	Nach 1. gilt: $\tilde{c}=c$. Nach sss-Satz folgt die Behauptung.
+	
+	\item Nach 1. gilt: $p^2+h^2=b^2$ und $q^2+h^2=q^2$
+	\begin{align*}
+	\Rightarrow p^2+q^2+2h^2=q^2+b^2=c^2=(p+q)^2=p^2+2pq+q^2 \Rightarrow 2h^2=2hq\Rightarrow h^2=pq
+	\end{align*}
+	
+	\item
+	\begin{align*}
+	a^2=h^2+q^2=pq+q^2=q(p+q)=qc\\
+	b^2=h^2+p^2=pq+p^2=p(p+q)=pc
+	\end{align*}
+	
+	\end{enumerate}\todo{Skizzen, Beweis 3.?}
+
+
+\subsection{Beispiel}
+
+	Sei $\Delta ABC$ ein gleichseitiges Dreieck.\todo{Skizze}\\
+	\newline
+	Für die Höhe $h$ gilt dann: $h^2=\left(\frac{a}{2}\right)^2=a^2\Rightarrow h=\frac{\sqrt{3}}{2}a$.\\
+	Für die Fläche folgt: $F=\frac{\sqrt{3}}{4}a^2$.
+
+
+\subsection{Beispiel}
+
+	
+	Sei $\Delta ABC$ gleichschenklig-rechtwinklig.\todo{Skizze}\\
+	\newline
+	Es gilt: $c^2=2a^2\Rightarrow c=\sqrt{2}a$\\
+	und $h^2+\left(\frac{c}{2}\right)^2=a^2\Rightarrow h^2=\frac{a^2}{2}\Rightarrow h=\frac{\sqrt{2}}{2}a$.\\
+	Schließlich folgt: $F=\frac{1}{2}a^2$.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
