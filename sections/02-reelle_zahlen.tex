@@ -1,52 +1,71 @@
 \section{Rechnen mit Brüchen und Reellen Zahlen}
 
-$\mathbb{Q} = \{ \frac{a}{b}| a \in \mathbb{Z}, b \in \mathbb{N_+} \}$ Menge der \textbf{rationalen Zahlen}
+$\mathbb{Q}=\{\frac{a}{b}|a\in\mathbb{Z},b\in\mathbb{N_+}\}$
+Menge der \textbf{rationalen Zahlen}
 
 \subsection[Rechenregeln für Brüche]{Bemerkung (Rechenregeln für Brüche)}
 
-	Für alle $a,c \in \mathbb{Z}$ und $b,c\in \mathbb{N_+}$ gilt:
+	Für alle $a,c\in\mathbb{Z}$ und $b,c\in\mathbb{N_+}$ gilt:
 	
 	\begin{enumerate}
 	
-	\item (Gleichheit von Brüchen)\\
-		\begin{align*}
-			\frac{a}{b} = \frac{c}{d} \textnormal{ genau dann wenn } ad=bc
-		\end{align*}
+		\item (Gleichheit von Brüchen)
 		
-		Beispiel: $\frac{3}{6}=\frac{1}{2}$ \newline
+		\[
+			\frac{a}{b} = \frac{c}{d} \textnormal{ genau dann wenn } ad=bc
+		\]\\
+		
+		\item 
+		
+		$
+			\operatorname{kgV}(a,b)=p_1^{\delta_1}\cdot p_2^{\delta_2}\cdot\ldots\cdot
+			p_k^{\delta_k}\text{ mit }\delta_i=\operatorname{max}\{\alpha_i,\beta_i\}
+		$
+		
+		Beispiel: $\frac{3}{6}=\frac{1}{2}$
 		
 		Kürzen von Brüchen:
-		\begin{align*}
-			\frac{a\cdot n}{b\cdot n} = \frac{a}{b} \textnormal{ für alle } n \in \mathbb{N_+}
-		\end{align*}
 		
+		\[
+			\frac{a\cdot n}{b\cdot n}=\frac{a}{b}\textnormal{ für alle }n\in\mathbb{N_+}
+		\]
 		
-	\item (Addition/Subtraktion von Brüchen)
-		\begin{align*}
-			\frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd} = \frac{a\cdot\tilde{b}+c\cdot \tilde{d}}{kgV(b,d)}
-		\end{align*}
-		mit $\tilde{b}=\frac{kgV(b,d)}{b}$ und $\tilde{d}=\frac{kgV(b,d)}{d}$. \newline
+		\item (Addition/Subtraktion von Brüchen)
 		
-		Beispiele: $\frac{1}{4}+\frac{1}{4}=\frac{2}{4}=\frac{1}{2}, 
+		\[
+			\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}=
+			\frac{a\cdot\tilde{b}+c\cdot\tilde{d}}{\operatorname{kgV}(b,d)}
+		\]
+		
+		mit 
+		
+		\[
+			\tilde{b}=\frac{\operatorname{kgV}(b,d)}{b}\\
+			\text{ und }\tilde{d}=\frac{\operatorname{kgV}(b,d)}{d}\text{.}
+		\]
+		
+		Beispiele: $\frac{1}{4}+\frac{1}{4}=\frac{2}{4}=\frac{1}{2},\quad 
 		\frac{7}{30}+\frac{11}{45}=\frac{22}{90}+\frac{22}{90}=\frac{43}{90}$
 		
-	\item (Multiplikation von Brüchen)
-		\begin{align*}
-			\frac{a}{b} \cdot \frac{c}{d} = \frac{a\cdot c}{b\cdot d}
-		\end{align*}			
+		\item (Multiplikation von Brüchen)
+		
+		\[
+			\frac{a}{b}\cdot\frac{c}{d}=\frac{a\cdot c}{b\cdot d}
+		\]
 	
-	\item (Division von Brüchen/Doppelbrüche)
+		\item (Division von Brüchen/Doppelbrüche)
 		Sei nun $c\neq 0$. Dann gilt:
 		
-		\begin{align*}
-			\frac{\frac{a}{b}}{\frac{c}{d}}= \frac{a}{b}\cdot \frac{d}{c}=\frac{ad}{bc}
-		\end{align*}
+		\[
+			\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a}{b}\cdot\frac{d}{c}=\frac{ad}{bc}\text{.}
+		\]
 		
-	\item (Kehrwert eines Bruchs)
-		\begin{align*}
-		\left( \frac{a}{b} \right) ^{-1} = \frac{1}{\frac{a}{b}}=\frac{b}{a}
-			\textnormal{ falls } a \in \mathbb{Z}\backslash\{0\}
-		\end{align*}
+		\item (Kehrwert eines Bruchs)
+		
+		\[
+			\left(\frac{a}{b}\right)^{-1}=\frac{1}{\frac{a}{b}}=\frac{b}{a}
+			\text{ falls }a\in\mathbb{Z}\backslash\{0\}
+		\]
 			
 	\end{enumerate}
 	
@@ -55,19 +74,24 @@ $\mathbb{Q} = \{ \frac{a}{b}| a \in \mathbb{Z}, b \in \mathbb{N_+} \}$ Menge der
 
 	 \begin{enumerate}
 	 
-	 \item Für $n \geq 1$ gilt
-	 \begin{align*}
-	 	\frac{1}{m} - \frac{1}{m-1} = \frac{m+1}{m(m+1)}-\frac{m}{m(m+1)} = \frac{1}{m(m+1)},
-	 \end{align*}
+		 \item Für $n\geq 1$ gilt
+	
+		 \[
+		 	\frac{1}{m}-\frac{1}{m-1}=\frac{m+1}{m(m+1)}-\frac{m}{m(m+1)}=\frac{1}{m(m+1)},
+		 \]
 	  
-	  also zB $\frac{1}{3}-\frac{1}{4}=\frac{1}{12}$.
+	  also zB $\frac{1}{3}-\frac{1}{4}=\frac{1}{12}$.\\
+	  \newline
 	  
-	  \item \begin{itemize}
+	  	\item
+	  	\begin{itemize}
+
 	  		\item $\frac{1}{2}+\frac{1}{4}=\frac{3}{4}$
 	  		\item $\frac{1}{2}+\frac{1}{4}+\frac{1}{8}=\frac{7}{8}$
-	  		\item $\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\frac{1}{16}=\frac{15}{16}$
-	  		\item $\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\dots+\frac{1}{2^n}=\frac{2^n-1}{2^n}$
-	  		\end{itemize}
+	  		\item $\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}=\frac{15}{16}$
+	  		\item $\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\dots+\frac{1}{2^n}=\frac{2^n-1}{2^n}$
+	  		
+	  	\end{itemize}
 	 
 	 \end{enumerate}
 	 
@@ -75,11 +99,16 @@ $\mathbb{Q} = \{ \frac{a}{b}| a \in \mathbb{Z}, b \in \mathbb{N_+} \}$ Menge der
 \subsection[Potenzen]{Definition (Potenzen)}
 
 	\begin{enumerate}
-	\item Sei $a \in \mathbb{R}$. Dann definiere $a^0=1, a^1=a, a^2=a^1\cdot a = a\cdot a$ etc.\\
-	Für $n\geq 1$ sei also $a^n= a^{n-1}\cdot a = \underbrace{a \cdot a \cdot \ldots \cdot a}_{n-mal}$.\\
-	Die Zahl $a^n$ heißt die $n$-te Potenz von $a$.
+
+		\item Sei $a\in\mathbb{R}$. Dann definiere $a^0=1,\ a^1=a,\ 
+		a^2=a^1\cdot a=a\cdot a$ etc.
+		\newline
+		Für $n\geq 1$ sei also $a^n=a^{n-1}\cdot a=
+		\underbrace{a\cdot a\cdot\ldots\cdot a}_{n-\text{mal}}$.\\
+		Die Zahl $a^n$ heißt die \textbf{$n$-te Potenz} von $a$.
 	
-	\item Sei $a \in \mathbb{R}$ mit $a \neq 0$. Für $n=-k$ mit $k\geq 1$ setze $a^n = a^{-k}= \frac{1}{a^k}$.\\
+		\item Sei $a\in\mathbb{R}$ mit $a\neq 0$. Für $n=-k$ mit $k\geq 1$ setze
+		$a^n=a^{-k}=\frac{1}{a^k}$.\\
 	
 	\end{enumerate}
 
@@ -87,67 +116,88 @@ $\mathbb{Q} = \{ \frac{a}{b}| a \in \mathbb{Z}, b \in \mathbb{N_+} \}$ Menge der
 \subsection{Beispiele}
 	
 	\begin{itemize}
-	\item $343 = 7^3§$
-	\item $2^{-3}=\frac{1}{2^3}=\frac{1}{8}=0,125$
-	\item $a^{-2}=\frac{1}{a^2}$
-	\item $3^6=9^3=729$
+	
+		\item $343=7^3$
+		\item $2^{-3}=\frac{1}{2^3}=\frac{1}{8}=0,125$
+		\item $a^{-2}=\frac{1}{a^2}$
+		\item $3^6=9^3=729$
+		
 	\end{itemize}
 	
 	
 \subsection[Rechenregeln für Potenzen]{Bemerkung (Rechenregeln für Potenzen)}
 
-	Für $a,b \in \mathbb{R}$ und $k,l\in \mathbb{Z}$ gilt:
+	Für $a,b\in\mathbb{R}$ und $k,l\in\mathbb{Z}$ gilt:
 	
 	\begin{enumerate}
-	\item $a^k \cdot b^k = (ab)^k$
-	\item $a^k \cdot a^l = a^{k+l}$
-	\item ${\left(  a^k \right)}^l=a^{kl}$
-	\item $\frac{a^k}{a^l}=a^{k-l} \textnormal{ falls } a \neq 0$
-	\item ${\left( \frac{a}{b} \right) }^k = \frac{a^k}{b^k} \textnormal{ falls } b \neq 0$
+	
+		\item $a^k\cdot b^k=(ab)^k$
+		\item $a^k\cdot a^l=a^{k+l}$
+		\item ${\left(a^k\right)}^l=a^{kl}$
+		\item $\frac{a^k}{a^l}=a^{k-l}\text{ falls }a\neq 0$
+		\item ${\left(\frac{a}{b}\right)}^k=\frac{a^k}{b^k}\text{ falls }b\neq 0$
+		
 	\end{enumerate}
 	
 	
 \subsection[Wurzeln]{Definition (Wurzeln)}
 
 	\begin{enumerate}
-	\item Sei $a \in \mathbb{R_+}=\{a \in \mathbb{R}|a > 0 \}$ und $k\in \mathbb{N_+}$.\\
-	Dann gibt es genau ein $b\in \mathbb{R_+}$ mit $b^k=a$. Diese Zahl $b$ heißt die $k$-te Wurzel von $a$ 
-	und wird mit $b=\sqrt[k]{a}$ bezeichnet.\\
-	Im Fall $k=2$ schreiben wir auch einfach $b=\sqrt{a}$. ("Quadratwurzel") \todo{Gänsefüßchen}
+		\item Sei $a\in\mathbb{R_+}=\{a\in\mathbb{R}|a>0\}$ und $k\in\mathbb{N_+}$.\\
+		Dann gibt es genau ein $b\in\mathbb{R_+}$ mit $b^k=a$. Diese Zahl $b$ heißt
+		die \textbf{$k$-te Wurzel} von $a$ und wird mit $b=\sqrt[k]{a}$ bezeichnet.\\
+		Im Fall $k=2$ schreiben wir auch einfach $b=\sqrt{a}$. ("Quadratwurzel")
+		\todo{Gänsefüßchen}
 	
-	\item Für $a\in \mathbb{R_+}$ und $m,n\in \mathbb{N_+}$ setzen wir $a^{\frac{m}{n}}=\sqrt[n]{a^m}$.
-	Insbesondere sei also $a^{\frac{1}{m}}=\sqrt[m]{a}$.\\
-	Mit dieser Definition gelten die Rechenregeln für Potenzen auch für rationale Exponenten. Insbesondere
-	sei $a^{-\frac{m}{n}}=\frac{1}{a^{\frac{m}{n}}}$.
+		\item Für $a\in\mathbb{R_+}$ und $m,n\in\mathbb{N_+}$ setzen wir
+
+		 \[
+		 	a^{\frac{m}{n}}=\sqrt[n]{a^m}\text{.}
+		 \]
+
+		Insbesondere sei also
+
+		\[
+			a^{\frac{1}{m}}=\sqrt[m]{a}\text{.}
+		\]
+
+		Mit dieser Definition gelten die Rechenregeln für Potenzen auch für rationale
+		Exponenten. Insbesondere sei
+
+		\[
+			a^{-\frac{m}{n}}=\frac{1}{a^{\frac{m}{n}}}\text{.}
+		\]
+		
 	\end{enumerate}
 	
 	
 \subsection{Beispiele}
 
 	\begin{itemize}
-	\item $\sqrt[3]{24}=\sqrt{2^3\cdot 3}=\sqrt[3]{2^3}\cdot \sqrt[3]{3}=2\cdot \sqrt[3]{3}$
-	\item $\sqrt[3]{216}=6$	
-	\item $\sqrt{484}=22$
-	\item $\sqrt{\frac{36}{121}}=\frac{6}{11}$
-	\item $\sqrt{6}\cdot \sqrt{3}= \sqrt{2}\cdot\sqrt{3}\cdot\sqrt{3}=3\sqrt{2}$	
+	
+		\item $\sqrt[3]{24}=\sqrt[3]{2^3\cdot 3}=\sqrt[3]{2^3}\cdot\sqrt[3]{3}
+		=2\cdot\sqrt[3]{3}$
+		\item $\sqrt[3]{216}=6$	
+		\item $\sqrt{484}=22$
+		\item $\sqrt{\frac{36}{121}}=\frac{6}{11}$
+		\item $\sqrt{6}\cdot\sqrt{3}=\sqrt{2}\cdot\sqrt{3}\cdot\sqrt{3}=3\sqrt{2}$	
 	
 	\end{itemize}
 	
 	
 \subsection[Irrationalitätsbeweis von $\sqrt{2}$ nach Euklid]{Satz (Euklid)}
-\todo{Blitz, qed}
-	\begin{tabular}{ll}
 	
-	
+	\begin{tabular}{ll}	
+
 	\textsc{Behauptung.} 	& $\sqrt{2}$ ist keine rationale Zahl.\\
-							&									\\
+							& \\
 	\textsc{Beweis.} 		& Angenommen $\sqrt{2}$ wäre rational.\\
-							& Dann gäbe es $a,b \in \mathbb{N_+}$ mit $\sqrt{2}=\frac{a}{b}$. \\
-							& Durch Kürzen können wir annehmen, dass $ggT(a,b)=1$ gilt. \\
-							& Durch Quaddrieren folgt $2= \frac{a^2}{b^2}$, also $2b^2=a^2$. \\
-							& Da $a^2$ gerade ist, muss auch $a$ gerade sein, 
-							das heißt $\exists c \in \mathbb{N_+}$ mit $a=2c$. \\
-							& Einsetzen liefert $2b^2=(2c)^2 \Leftrightarrow b^2=2c^2$. \\
-							& Somit muss auch $b$ gerade sein. BLITZ zu $ggT(a,b)=1$.
-	\end{tabular}
-	
+							& Dann gäbe es $a,b\in\mathbb{N_+}$ mit $\sqrt{2}=\frac{a}{b}$.\\
+							& Durch Kürzen können wir annehmen, dass $ggT(a,b)=1$ gilt.\\
+							& Durch Quaddrieren folgt $2=\frac{a^2}{b^2}$, also $2b^2=a^2$.\\
+							& Da $a^2$ gerade ist, ist auch $a$ gerade,
+							das heißt $\exists c\in\mathbb{N_+}$ mit $a=2c$.\\
+							& Einsetzen liefert $2b^2=(2c)^2\Leftrightarrow b^2=2c^2$.\\
+							& Somit muss auch $b$ gerade sein.
+							BLITZ zu $ggT(a,b)=1\quad\square$.
+	\end{tabular}\todo{Blitz}

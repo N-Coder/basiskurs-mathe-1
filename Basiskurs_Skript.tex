@@ -1,15 +1,15 @@
 \documentclass[11pt,a4paper,ngerman]{article}
 
 % IMPORTS
-\usepackage[utf8]{inputenc}
 %\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes} % To-Dos
+\usepackage{relsize} 	% Größere Symbole
+\usepackage{parskip} 	% Absätze ohne Einrückungen
+\usepackage{mathtools} 	% Für Pfeil mit Erklärung
+\usepackage{amsfonts} 	% Buchstaben mit Doppelstrich
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{relsize} %Größere Symbole
-\usepackage{amsfonts} % Buchstaben mit Doppelstrich
-\usepackage{parskip} % Absätze ohne Einrückungen
-\usepackage{mathtools} % Für Pfeil mit Erklärung
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes} % To-Dos
 \usepackage{url}
 \usepackage{hyperref}
 
@@ -19,6 +19,7 @@
 \newcommand{\circexpl}[1]{%
   \underset{\substack{\uparrow\\\mathrlap{\text{\hspace{-1em}#1}}}}{\circ}}
 
+% NEWCOMMANDS
 \newcommand{\mathlll}[1]{\mathlarger{\mathlarger{\mathlarger{#1}}}}
 \newcommand{\mathll}[1]{\mathlarger{\mathlarger{{#1}}}}
 \newcommand{\qed}{\marginpar{$\square$}}
@@ -35,20 +36,22 @@
 
 \begin{titlepage}
     \ \newline\newline\newline\newline\newline
+	
 	\begin{center}
-		\huge Mitschrift zum \\
-		\Huge \textbf{Basiskurs Mathematik} \\
-		\huge bei Prof. Kreuzer im WS 16/17 \\
+
+		\huge Mitschrift zum\\
+		\Huge\textbf{Basiskurs Mathematik}\\
+		\huge bei Prof. Kreuzer im WS 16/17\\
 		\normalsize
 
 		\vspace{1cm}
 		\begin{tabular}[b]{l|l}
-			\textbf{author} & Maximilian Reif \texttt{\href{mailto:reifmaxi@fim.uni-passau.de}
-			{<reifmaxi@fim.uni-passau.de>}} \\
-			\textbf{last change} & \today, version 0.8.1 \\
-			\textbf{github} & \url{https://github.com/lordreif/basiskurs-mathe}
+			\textbf{author} 		& Maximilian Reif
+			\texttt{\href{mailto:reifmaxi@fim.uni-passau.de}
+			{<reifmaxi@fim.uni-passau.de>}}\\
+			\textbf{last change} 	& \today, version 0.8.1\\
+			\textbf{github} 		& \url{https://github.com/lordreif/basiskurs-mathe}
 		\end{tabular}
-
 		\vspace{1cm}
 		
 	\end{center}
@@ -59,7 +62,7 @@
 \setcounter{page}{2}
 
 \newpage
-\tableofcontents \thispagestyle{empty}
+\tableofcontents\thispagestyle{empty}
 \newpage
 
 \include{sections/01-ganze_zahlen}
@@ -75,6 +78,5 @@
 \setcounter{section}{10}
 \include{sections/11-komplexe_zahlen}
 \include{sections/12-kombinatorik}
-
 
 \end{document}
