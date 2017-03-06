@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 %\usepackage[ngerman]{babel}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{relsize} %Größere Symbole
 \usepackage{amsfonts} % Buchstaben mit Doppelstrich
 \usepackage{parskip} % Absätze ohne Einrückungen
@@ -20,6 +21,8 @@
 
 \newcommand{\mathlll}[1]{\mathlarger{\mathlarger{\mathlarger{#1}}}}
 \newcommand{\mathll}[1]{\mathlarger{\mathlarger{{#1}}}}
+\newcommand{\qed}{\marginpar{$\square$}}
+\newcommand{\f}[4]{\underset{#3}{#1}\underset{\mapsto}{\rightarrow}\underset{#4}{#2}}
 
 % META
 \date{\today}
@@ -42,7 +45,7 @@
 		\begin{tabular}[b]{l|l}
 			\textbf{author} & Maximilian Reif \texttt{\href{mailto:reifmaxi@fim.uni-passau.de}
 			{<reifmaxi@fim.uni-passau.de>}} \\
-			\textbf{last change} & \today, version 0.8.0 \\
+			\textbf{last change} & \today, version 0.8.1 \\
 			\textbf{github} & \url{https://github.com/lordreif/basiskurs-mathe}
 		\end{tabular}
 
@@ -65,7 +68,7 @@
 \include{sections/04-gleichungen}
 \include{sections/05-ungleichungen}
 \include{sections/06-ebene_geometrie}
-%\include{sections/07-trigonometrie}
+\include{sections/07-trigonometrie}
 %\include{sections/08-raumgeometrie}
 %\include{sections/09-analytische_geometrie}
 %\include{sections/10-abbildungsgeometrie}

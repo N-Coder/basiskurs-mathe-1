@@ -1,65 +1,81 @@
 \section{Rechnen mit ganzen Zahlen}
-$\mathbb{N} = \{0, 1, 2, 3,  \dots \}$ Menge der \textbf{natürlichen Zahlen} \newline
+
+$\mathbb{N} = \{0, 1, 2, 3,  \dots \}$ Menge der \textbf{natürlichen Zahlen}\\
 $\mathbb{Z} = \{0, 1, -1, 2, -2,  \dots \}$ Menge der \textbf{ganzen Zahlen}
 
 
 \subsection[Zahlensysteme]{Satz (Zahlensysteme)}
 
-	Sei $b \in \mathbb{N} \textnormal{ mit } b \geq 2 $. 
-	(Die Zahl $b$ heißt \textbf{Basis} des Zahlensystems)\newline
-	Dann gibt es zu jeder natürlichen Zahl $n \in \mathbb{N}$ eindeutig bestimmte Elemente 
-	$a_0, a_1, \dots,a_k \in \{0,1, \dots, b-1 \} $ sodass gilt:
+	Sei $b\in\mathbb{N}\text{ mit }b\geq 2$. 
+	(Die Zahl $b$ heißt \textbf{Basis} des Zahlensystems)\\
+	Dann gibt es zu jeder natürlichen Zahl $n\in\mathbb{N}$ eindeutig bestimmte Elemente 
+	$a_0,a_1,\dots,a_k\in\{0,1,\dots,b-1\}$ sodass gilt:
 
-	\begin{align*}
+	\[
 		n = a_0 + a_1 \cdot b + a_2 \cdot b^2 + \cdots + a_k \cdot b^k.
-	\end{align*}
+	\]
 
-	Die Zahlen $a_0,\dots,a_k$ heißen \textbf{Ziffern} von $n$ in der Darstellung zur Basis $b$. \newline
-	\underline{Schreibweise:} $n_{[b]} = a_k a_{k-1} \dots a_1 a_0 $ (fehlt $[b]$ so ist $[10]$ gemeint)
+	Die Zahlen $a_0,\dots,a_k$ heißen \textbf{Ziffern} von $n$ 
+	in der Darstellung zur Basis $b$.\\
+	\underline{Schreibweise:} $n_{[b]}=a_k a_{k-1}\dots a_1 a_0$ 
+	(fehlt $[b]$ so ist $[10]$ gemeint)
 
 
 \subsection{Beispiele}
 
 	\begin{itemize}
 	
-		\item Binärsystem, $b=2$ \newline
-		$5_{[10]}=101_{[2]}$ \newline
-		$101_{[10]}=64_{[10]}+32_{[10]}+4_{[10]}+1_{[10]}=1100101_{[2]}$
+		\item Binärsystem, $b=2$
+
+		\begin{itemize}
 		
-		\item Hexadezimalsystem, $b=16$ \newline
-		Notation: $10_{[10]}=A_{[16]}, 11_{[10]}=B_{[16]},\dots,15_{[10]}=F_{[16]}$ \newline
-		$101_{[10]}=5\cdot 16+5=55_{[16]}$ \newline
-		$1B3_{[16]}=256_{[10]}+11_{[10]}\cdot 16_{[10]}+3_{[10]}=435_{[10]}$
+			\item $5_{[10]}=101_{[2]}$
+			\item $101_{[10]}=64_{[10]}+32_{[10]}+4_{[10]}+1_{[10]}=1100101_{[2]}$
+		
+		\end{itemize}
+		
+		\item Hexadezimalsystem, $b=16$\\
+		\underline{Notation:} 
+		$10_{[10]}=A_{[16]},11_{[10]}=B_{[16]},\dots,15_{[10]}=F_{[16]}$
+		
+		\begin{itemize}
+		
+			\item $101_{[10]}=5\cdot 16+5=55_{[16]}$
+			\item $1B3_{[16]}=256_{[10]}+11_{[10]}\cdot 16_{[10]}+3_{[10]}=435_{[10]}$
+			
+		\end{itemize}
 	
 	\end{itemize}
 	
 
 \subsection[Division mit Rest]{Satz (Division mit Rest)}
 
-	Sei $n \in \mathbb{Z}$ und $m\in \mathbb{N_+}$. \\
-	Dann gibt es eine eindeutige Darstellung $n=q\cdot m+r$ mit $q\in \mathbb{Z}$ (genannt \textbf{Quotient})
-	und $r \in \{0,1,\dots,m-1\}$ (genannt \textbf{Rest}).
+	Sei $n\in\mathbb{Z}$ und $m\in\mathbb{N_+}$.\\
+	Dann gibt es eine eindeutige Darstellung
+	$n=q\cdot m+r$ mit $q\in \mathbb{Z}$ (genannt \textbf{Quotient})
+	und $r\in\{0,1,\dots,m-1\}$ (genannt \textbf{Rest}).
 	
-	\begin{align*}
-	\textnormal{\underline{Schreibweise:} } n &\equalexpl{"ist kongruent"} r \qquad (mod \ m)
-	\end{align*}
+	\[	
+		\text{\underline{Schreibweise:} }n\equalexpl{"ist kongruent"}r
+		\qquad(\operatorname{mod}~m)		
+	\]
 
 	
 \subsection{Beispiele}
 	
 	\begin{itemize}
 
-		\item Die Zahl $n=87$ soll durch $m=5$ geteilt werden: \\
-		\begin{align*}
-		n = q\cdot m+r=17\cdot 5+2
-		\end{align*}			
+		\item Die Zahl $n=87$ soll durch $m=5$ geteilt werden:
 		
-		\item Die möglichen Reste bei der Division einer Quadratzahl durch 12 sind: \\
+		\[
+			n=q\cdot m+r=17\cdot 5+2
+		\]			
 		
-		\centering
+		\item Die möglichen Reste bei der Division einer Quadratzahl durch 12 sind:\\
+		
 		\begin{tabular}{r|c|c|c|c|c|c|c|c|c|c|c|c|}
-		$n$ \ (mod 12)  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\ \hline
-		$n^2$ \ (mod 12) & 0 & 1 & 4 & 9 & 4 & 1 & 0 & 1 & 4 & 9 & 4  & 1
+		$n$ \ (mod 12)		& 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\ \hline
+		$n^2$ \ (mod 12)	& 0 & 1 & 4 & 9 & 4 & 1 & 0 & 1 & 4 & 9 & 4  & 1
 		\end{tabular}
 	
 	\end{itemize}
@@ -72,8 +88,8 @@ $\mathbb{Z} = \{0, 1, -1, 2, -2,  \dots \}$ Menge der \textbf{ganzen Zahlen}
 		\item Ist der Rest bei der Division von $n$ durch $m$ gleich Null, 
 		so heißt $n$ ein \textbf{Vielfaches} von $m$ und $m$ ein \textbf{Teiler} von $n$.
 		
-		\item Eine Zahl $n \geq 2$ heißt eine \textbf{Primzahl}, wenn sie nur zwei positive Teiler 1
-		 und $n$ besitzt.
+		\item Eine Zahl $n\geq 2$ heißt eine \textbf{Primzahl}, wenn sie nur 
+		zwei positive Teiler 1 und $n$ besitzt.
 		
 	\end{enumerate}
 
@@ -84,62 +100,73 @@ $\mathbb{Z} = \{0, 1, -1, 2, -2,  \dots \}$ Menge der \textbf{ganzen Zahlen}
 		
 		\item Die Teiler von 12 sind 1, 2, 3, 4, 6, 12.
 		\item Die ersten Primzahlen sind 2, 3, 5, 7, 11, 13, 17, 19, \dots
+		
 	\end{itemize}
 	
 	
 \subsection[Fundamentalsatz der Arithmetik]{Satz (Fundamentalsatz der Arithmetik)}
 
-	Sei $n \in \mathbb{N_+}$. Dann gibt es eine (bis auf die Reihenfolge) eindeutige Darstellung
+	Sei $n\in\mathbb{N_+}$. Dann gibt es eine (bis auf die Reihenfolge)
+	eindeutige Darstellung
 	
-	\begin{align*}
-	n = p_1^{\alpha_1} \cdot p_2^{\alpha_2} \cdot \ldots \cdot p_n^{\alpha_n}
-	\end{align*}
+	\[
+		n=p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdot\ldots\cdot p_n^{\alpha_n}
+	\]
 	
-	mit paarweise verschiedenen Primzahlen $p_1, \dots , p_k$ und $\alpha_i \in \mathbb{N_+}$. \\
-	Diese Darstellung heißt \textbf{Primfaktorzerlegung} von $n$. 
+	mit paarweise verschiedenen Primzahlen $p_1,\dots,p_k$ und $\alpha_i\in\mathbb{N_+}$.\\
+	Diese Darstellung heißt \textbf{Primfaktorzerlegung} von $n$.
 
 	
 \subsection{Beispiele}
 
 	\begin{itemize}
 	
-	\item $24 = 2^3 \cdot 3$
-	\item $111 = 3 \cdot 37$
-	\item $1011=7\cdot 11\cdot 13$
-	\item $1024 = 2^10$
-	\item $729 = 3^6$
-	\item $625 = 5^4$
+		\item $24=2^3\cdot 3$
+		\item $111=3\cdot 37$
+		\item $1011=7\cdot 11\cdot 13$
+		\item $1024=2^{10}$
+		\item $729=3^6$
+		\item $625=5^4$
 	
 	\end{itemize}
 	
 	
-\subsection[ggT, kgV]{Definition (ggT, kgV)}
+\subsection[$\operatorname{ggT}, \operatorname{kgV}$]{Definition ($\operatorname{ggT}, \operatorname{kgV}$)}
 	
-	Seien $a,b \in \mathbb{N_+}$.
+	Seien $a,b\in\mathbb{N_+}$.
 	
 	\begin{enumerate}
 	
-	\item Die größte positive ganze Zahl $g \in \mathbb{N_+}$ mit $g|a$ und $g|b$ heißt der 
-	\textbf{größte gemeinsame Teiler (ggT)} von $a$ und $b$.
+		\item Die größte positive ganze Zahl $g\in\mathbb{N_+}$ mit $g|a$ und $g|b$
+		heißt der \textbf{größte gemeinsame Teiler ($\operatorname{ggT}$)} von $a$ und $b$.
 		
-	\item Die kleinste positive ganze Zahl $k \in \mathbb{N_+}$ mit $a|k$ und $b|k$ heißt das 
-	\textbf{kleinste gemeinsame Vielfache (kgV)} von $a$ und $b$.
+		\item Die kleinste positive ganze Zahl $k\in\mathbb{N_+}$ mit $a|k$ und $b|k$
+		heißt das \textbf{kleinste gemeinsame Vielfache ($\operatorname{kgV}$)}
+		von $a$ und $b$.
 		
 	\end{enumerate}
 
 
-\subsection[ggT/kgV durch Primfaktorenzerlegung]{Satz (ggT/kgV durch Primfaktorenzerlegung)}
+\subsection[$\operatorname{ggT}$/$\operatorname{kgV}$ durch Primfaktorenzerlegung]{Satz ($\operatorname{ggT}$/$\operatorname{kgV}$ durch Primfaktorenzerlegung)}
 
-	Sei $a,b \in \mathbb{N_+}$ mit Primfaktorzerlegungen $a=p_1^{\alpha_1} \cdot \ldots \cdot p_k^{\alpha_k}$ und
-	$b=p_1^{\beta_1} \cdot \ldots \cdot p_k^{\beta_k}$ mit $\alpha_i, \beta_i \geq 0$.
+	Sei $a,b\in\mathbb{N_+}$ mit Primfaktorzerlegungen 
+
+	\[
+		a=p_1^{\alpha_1}\cdot\ldots\cdot p_k^{\alpha_k}\text{ und}
+		b=p_1^{\beta_1}\cdot\ldots\cdot p_k^{\beta_k}\text{ mit }\alpha_i,\beta_i\geq 0.
+	\]
+	
 	Dann gilt:
+	
 	\begin{enumerate}
 		
-	\item $ggT(a,b)=p_1^{\gamma_1}\cdot p_2^{\gamma_2} \cdot \ldots \cdot p_k^{\gamma_k}$ 
-	mit $\gamma_i=min\{\alpha_i,\beta_i \}$
+		\item $\operatorname{ggT}(a,b)=p_1^{\gamma_1}\cdot p_2^{\gamma_2}
+		\cdot\ldots\cdot p_k^{\gamma_k}$ mit $\gamma_i=\operatorname{min}
+		\{\alpha_i,\beta_i\}$
 		
-	\item $kgV(a,b)=p_1^{\delta1}\cdot p_2^{\delta2} \cdot \ldots \cdot p_k^{\delta_k}$ 
-	mit $\delta_i=max\{\alpha_i,\beta_i \}$
+		\item $\operatorname{kgV}(a,b)=p_1^{\delta1}\cdot p_2^{\delta2}
+		\cdot\ldots\cdot p_k^{\delta_k}$ mit $\delta_i=\oparatorname{max}
+		\{\alpha_i,\beta_i\}$
 		
 	\end{enumerate}
 	
@@ -148,8 +175,10 @@ $\mathbb{Z} = \{0, 1, -1, 2, -2,  \dots \}$ Menge der \textbf{ganzen Zahlen}
 
 	\begin{itemize}
 			
-	\item $ggT(30,75)= 2^0\cdot 3^1\cdot 5^1 = 15$,\\ denn $30=2 \cdot 3 \cdot 5$ und $75=3 \cdot 5^2$
-	\item $ggT(64,81)= 1$,\\ denn $64=2^6, 81=3^4$
+	\item $\operatorname{ggT}(30,75)=2^0\cdot 3^1\cdot 5^1 = 15$,\\ 
+	denn $30=2\cdot 3\cdot 5$ und $75=3\cdot 5^2$
+	
+	\item $\operatorname{ggT}(64,81)=1$,\\ denn $64=2^6,81=3^4$
 
 	\end{itemize}	
 
@@ -158,16 +187,17 @@ $\mathbb{Z} = \{0, 1, -1, 2, -2,  \dots \}$ Menge der \textbf{ganzen Zahlen}
 
 	\begin{enumerate}
 	
-	\item $2|n$ genau dann, wenn die Endziffer von $n$ in $\{0,2,4,6,8\} $ ist.
-	\item $3|n$ genau dann, wenn die Quersumme($Qs$) von $n$ durch 3 Teilbar ist.
-	\item $4|n$ genau dann, wenn $4|(10a_1+a_0)$.
-	\item $5|n$ genau dann, wenn $a_0 \in \{0,5\}$ gilt.
-	\item $6|n$ genau dann, wenn $2|n$ und $3|n$.
-	\item $8|n$ genau dann, wenn $8|(100a_2+10a_1+a_0)$.
-	\item $9|n$ genau dann, wenn $9|Qs(n)$.
-	\item $10|n$ genau dann, wenn $a_0=0$ gilt.
-	\item $11|n$ genau dann, wenn $11|(a_0-a_1+a_2-+\cdots \pm a_k)$.
-	\item $12|n$ genau dann, wenn $3|n$ und $4|n$.
+		\item $2|n$ genau dann, wenn die Endziffer von $n$ in $\{0,2,4,6,8\}$ ist.
+		\item $3|n$ genau dann, wenn die Quersumme($\operatorname{Qs}$)
+		von $n$ durch 3 Teilbar ist.
+		\item $4|n$ genau dann, wenn $4|(10a_1+a_0)$.
+		\item $5|n$ genau dann, wenn $a_0\in\{0,5\}$ gilt.
+		\item $6|n$ genau dann, wenn $2|n$ und $3|n$.
+		\item $8|n$ genau dann, wenn $8|(100a_2+10a_1+a_0)$.
+		\item $9|n$ genau dann, wenn $9|\operatorname{Qs}(n)$.
+		\item $10|n$ genau dann, wenn $a_0=0$ gilt.
+		\item $11|n$ genau dann, wenn $11|(a_0-a_1+a_2-+\cdots\pm a_k)$.
+		\item $12|n$ genau dann, wenn $3|n$ und $4|n$.
 	
 	\end{enumerate}
 
@@ -176,8 +206,8 @@ $\mathbb{Z} = \{0, 1, -1, 2, -2,  \dots \}$ Menge der \textbf{ganzen Zahlen}
 
 	 \begin{itemize}
 	 
-	 \item $9|123453$
-	 \item $11|1232$
+	 	\item $9|123453$
+	 	\item $11|1232$
 	 
 	 \end{itemize}
 
@@ -186,39 +216,54 @@ $\mathbb{Z} = \{0, 1, -1, 2, -2,  \dots \}$ Menge der \textbf{ganzen Zahlen}
 
 	\begin{enumerate}
 	
-	\item Dritte binomische Formel: $(x-y)(x+y)=x^2-y^2$ plus Quadratzahlen
+		\item Dritte binomische Formel: $(x-y)(x+y)=x^2-y^2$ plus Quadratzahlen
+		
 		\begin{itemize}
-		\item $13 \cdot 17 = 15^2 -2^2 = 225-4=221$
-		\item $23 \cdot 25 = 576-1=575$
-		\item $27 \cdot  33 = 900-9=891$ 
+		
+			\item $13\cdot 17=15^2-2^2=225-4=221$
+			\item $23\cdot 25=576-1=575$
+			\item $27\cdot 33=900-9=891$ 
+			
 		\end{itemize}		
 		
-	\item Multiplikation durch Umsortierung der Primfaktoren
+		\item Multiplikation durch Umsortierung der Primfaktoren
+			
 		\begin{itemize}
-		\item $8 \cdot 375=8 \cdot 3 \cdot 125 = 10^3 \cdot 3=3000$
-		\item $40 \cdot 75=4 \cdot 10 \cdot 3 \cdot 25 = 3000$
+	
+			\item $8\cdot 375=8\cdot 3\cdot 125=10^3\cdot 3=3000$
+			\item $40\cdot 75=4\cdot 10\cdot 3\cdot 25=3000$
+			
 		\end{itemize}
 		
-	\item Quadrieren mittels erster binomischer Formel: $(x+y)^2=x^2+2xy+y^2$
+		\item Quadrieren mittels erster binomischer Formel: $(x+y)^2=x^2+2xy+y^2$
+		
 		\begin{itemize}
-		\item $43^2=40^2+2 \cdot 3 \cdot 40 + 9 = 1600+240+9=1849$
-		\item $98^2 \cdot (100-2)^2=10000-400+4=9604$
+		
+			\item $43^2=40^2+2\cdot 3\cdot 40+9=1600+240+9=1849$
+			\item $98^2\cdot (100-2)^2=10000-400+4=9604$
+			
 		\end{itemize}
 
-	\end{enumerate}
+	\end{enumerate}\todo{Querverweise binom}
 
 
-\subsection[Rekursive Definition von ggT und kgV]{Definition (Rekursive Definition von ggT und kgV)}
+\subsection[Rekursive Definition von $\operatorname{ggT}$ und $\operatorname{kgV}$]{Definition (Rekursive Definition von $\operatorname{ggT}$ und $\operatorname{kgV}$)}
 
-	Für $n\geq 2$ und $a_0,\dots,a_n \in \mathbb{N_+}$ gilt:
+	Für $n\geq 2$ und $a_0,\dots,a_n\in\mathbb{N_+}$ gilt:
+	
 	\begin{itemize}
-	\item $ggT(a_1,a_2,\dots , a_n)=ggT(ggT(a_1,a_2,\dots , a_{n-1}),a_n)$
-	\item $kgV(a_1,a_2,\dots , a_n)=kgV(kgV(a_1,a_2,\dots , a_{n-1}),a_n)$
+		
+		\item $\operatorname{ggT}(a_1,a_2,\dots,a_n)=
+		\operatorname{ggT}(\operatorname{ggT}(a_1,a_2,\dots,a_{n-1}),a_n)$
+		\item $\operatorname{kgV}(a_1,a_2,\dots,a_n)=
+		\operatorname{kgV}(\operatorname{kgV}(a_1,a_2,\dots,a_{n-1}),a_n)$
+		
 	\end{itemize}
 	
 \subsection[Unendlichkeitssatz der Primzahlen]{Satz: Es gibt unendlich viele Primzahlen}
 
 	\textsc{Beweis.} Angenommen es gibt nur endlich viele Primzahlen $p_1,p_2,\dots,p_k$. 
-	Dann betrachte die Primfaktorenzerlegung von $n=p_1 \cdot p_2 \cdot \ldots \cdot p_k +1$. 
+	Dann betrachte die Primfaktorenzerlegung von $n=p_1\cdot p_2\cdot\ldots\cdot p_k +1$. 
 	Die Zahlen $p_1,p_2,\dots,p_k$ teilen $n$ \underline{nicht}, sondern lassen den Rest 1. 
-	Also sind $p_1,p_2,\dots,p_k$ nicht alle Primzahlen.\todo{blitz, qed}
+	Also sind $p_1,p_2,\dots,p_k$ nicht alle Primzahlen, was im Widerspruch zur Annahme
+	steht.\qed
